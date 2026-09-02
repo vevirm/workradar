@@ -1,0 +1,198 @@
+name: Work Radar scan
+
+on:
+  workflow_dispatch:
+    inputs:
+      budget_seconds:
+        description: 'Scan budget in seconds (default 600, i.e. ten minutes)'
+        required: false
+        default: '600'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: work-radar-scan
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out the repository without storing credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install scanner dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the scanner regression tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Run the scan
+        env:
+          OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
+          CROSSREF_MAILTO: ${{ secrets.CROSSREF_MAILTO }}
+          WORK_RADAR_TRIGGER: manual
+          WORK_RADAR_BUDGET_SECONDS: ${{ inputs.budget_seconds }}
+        run: python scripts/scan_work_radar.py
+
+      - name: Confirm the scan touched nothing but its own data file
+        shell: bash
+        run: |
+          set -euo pipefail
+          tracked="$(git diff --name-only -- . ':!work_radar.json' || true)"
+          untracked="$(git ls-files --others --exclude-standard | grep -vx 'work_radar.json' || true)"
+
+          if [[ -n "$tracked" ]]; then
+            echo "::warning::Restoring unexpected tracked changes:"
+            printf '%s\n' "$tracked"
+            while IFS= read -r path; do
+              [[ -z "$path" ]] && continue
+              git restore --worktree -- "$path"
+            done <<< "$tracked"
+          fi
+
+          if [[ -n "$untracked" ]]; then
+            echo "::warning::Removing unexpected untracked files:"
+            printf '%s\n' "$untracked"
+            while IFS= read -r path; do
+              [[ -z "$path" ]] && continue
+              rm -rf -- "$path"
+            done <<< "$untracked"
+          fi
+
+          remaining="$({ git diff --name-only; git ls-files --others --exclude-standard; } \
+            | sort -u | grep -vx 'work_radar.json' || true)"
+          if [[ -n "$remaining" ]]; then
+            echo "::error::Could not isolate the scan output. Refusing to save."
+            printf '%s\n' "$remaining"
+            exit 1
+          fi
+
+      - name: Check the corpus did not collapse
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+
+          path = Path("work_radar.json")
+          if not path.is_file():
+              raise SystemExit("work_radar.json is missing after the scan")
+          new = json.loads(path.read_text(encoding="utf-8"))
+          if not isinstance(new, dict):
+              raise SystemExit("work_radar.json is not a JSON object")
+
+          try:
+              old = json.loads(subprocess.check_output(
+                  ["git", "show", "HEAD:work_radar.json"]).decode("utf-8"))
+          except Exception:
+              print("No previous work_radar.json to compare against; first run.")
+              raise SystemExit(0)
+          if not isinstance(old, dict):
+              raise SystemExit(0)
+
+          before = old.get("items") or []
+          after = new.get("items") or []
+
+          if len(before) >= 15 and len(after) < len(before) * 0.6:
+              raise SystemExit(
+                  f"corpus shrank from {len(before)} to {len(after)} items; refusing to save")
+
+          def keys(items):
+              out = set()
+              for item in items:
+                  if isinstance(item, dict):
+                      link = str(item.get("link", "")).strip().lower().rstrip("/")
+                      if link:
+                          out.add(link)
+              return out
+
+          floor = str(new.get("corpus_start_date") or "")
+          lost = []
+          fresh_keys = keys(after)
+          for item in before:
+              if not isinstance(item, dict):
+                  continue
+              if floor and str(item.get("date", "")) < floor:
+                  continue
+              link = str(item.get("link", "")).strip().lower().rstrip("/")
+              if link and link not in fresh_keys:
+                  lost.append(item.get("title") or link)
+          if lost:
+              raise SystemExit(
+                  f"{len(lost)} still-in-window item(s) disappeared; refusing to save. "
+                  f"First few: {'; '.join(str(x) for x in lost[:5])}")
+
+          print(f"corpus check passed: {len(before)} -> {len(after)} items")
+          PY
+
+      - name: Commit the results
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- work_radar.json
+
+          if git diff --cached --quiet; then
+            echo "Nothing changed in this scan."
+            exit 0
+          fi
+
+          git commit -m "Update work radar"
+          auth="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')"
+          git config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ${auth}"
+          trap 'git config --local --unset-all http.https://github.com/.extraheader >/dev/null 2>&1 || true' EXIT
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Summarise the run
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          try:
+              doc = json.loads(Path("work_radar.json").read_text(encoding="utf-8"))
+          except Exception:
+              print("No scan output to summarise.")
+              raise SystemExit(0)
+          stats = doc.get("stats", {})
+          counts = doc.get("matrix_counts", {})
+          print(f"## Work Radar scan\n")
+          print(f"- Ran for **{doc.get('run_seconds', '?')}s** of a "
+                f"{doc.get('scan_budget_seconds', '?')}s budget")
+          print(f"- Corpus: **{stats.get('corpus_size', 0)}** items "
+                f"(**{stats.get('new_this_scan', 0)}** new)")
+          print(f"- Placed **{stats.get('placed', 0)}**, held unplaced "
+                f"**{stats.get('unplaced', 0)}**\n")
+          print("| Quadrant | Items |\n| --- | --- |")
+          for key, value in counts.items():
+              print(f"| {key} | {value} |")
+          warnings = doc.get("warnings") or []
+          if warnings:
+              print("\n**Warnings**\n")
+              for warning in warnings:
+                  print(f"- {warning}")
+          PY
