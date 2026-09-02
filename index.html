@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Work Radar</title>
+<style>
+  :root{
+    --ink:#000;
+    --paper:#fff;
+    --quiet:#6b6b6b;
+    --rule:#cfcfcf;
+    --wash:#f4f4f4;
+    --serif:"Iowan Old Style",Charter,Georgia,"Times New Roman",serif;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.5}
+  .wrap{width:min(100% - 40px,1180px);margin-inline:auto}
+  a{color:inherit}
+  button{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+  /* ---- gate ---- */
+  #gate{min-height:100vh;display:grid;place-items:center;padding:24px}
+  .gate-inner{width:min(100%,420px)}
+  .gate-inner h1{font-size:34px;line-height:1.05;margin:0 0 6px;font-weight:600}
+  .gate-inner p{margin:0 0 24px;color:var(--quiet);font-size:15px}
+  .gate-form{display:flex;gap:8px}
+  .gate-form input{flex:1;min-width:0;font:inherit;padding:10px 12px;border:1px solid var(--ink);background:var(--paper)}
+  .gate-form button{padding:10px 18px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+  .gate-msg{min-height:22px;margin-top:12px;font-size:14px}
+
+  /* ---- masthead ---- */
+  #app{display:none}
+  .masthead{border-bottom:2px solid var(--ink);padding:26px 0 18px}
+  .masthead h1{font-size:clamp(30px,4.4vw,46px);line-height:1;margin:0;font-weight:600;letter-spacing:-.02em}
+  .masthead p{margin:10px 0 0;max-width:62ch;color:var(--quiet);font-size:16px}
+  .status{font-family:var(--sans);font-size:12.5px;color:var(--quiet);display:flex;flex-wrap:wrap;gap:6px 20px;padding:10px 0;border-bottom:1px solid var(--rule)}
+  .status b{font-weight:600;color:var(--ink)}
+  .status button{margin-left:auto;background:none;border:0;text-decoration:underline;cursor:pointer;color:var(--quiet);font-family:var(--sans);font-size:12.5px}
+
+  /* ---- controls ---- */
+  .controls{display:flex;gap:8px;align-items:center;padding:14px 0;flex-wrap:wrap}
+  .controls input[type=search]{flex:1;min-width:200px;font:inherit;font-size:15px;padding:8px 11px;border:1px solid var(--rule);background:var(--paper)}
+  .toggle{font-family:var(--sans);font-size:13px;padding:8px 12px;border:1px solid var(--rule);background:var(--paper);cursor:pointer}
+  .toggle[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  /* ---- matrix ---- */
+  .matrix-frame{display:grid;grid-template-columns:34px minmax(0,1fr);grid-template-rows:minmax(0,1fr) 34px;margin:6px 0 44px}
+  .y-axis{grid-row:1;grid-column:1;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:14px 0}
+  .y-axis span{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--sans);font-size:11.5px;color:var(--quiet);white-space:nowrap}
+  .x-axis{grid-row:2;grid-column:2;display:flex;justify-content:space-between;align-items:center;padding:0 14px;font-family:var(--sans);font-size:11.5px;color:var(--quiet)}
+  .grid{grid-row:1;grid-column:2;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}
+  .cell{border:1px solid var(--rule);margin:-1px 0 0 -1px;padding:16px 16px 14px;min-height:280px;display:flex;flex-direction:column}
+  .cell-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:9px;border-bottom:1px solid var(--rule)}
+  .cell-head h2{font-size:19px;margin:0;font-weight:600}
+  .cell-head .n{font-family:var(--sans);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
+  .cell-read{font-size:13.5px;color:var(--quiet);margin:9px 0 4px;max-width:46ch}
+  .cell ul{list-style:none;margin:6px 0 0;padding:0}
+  .cell li{border-top:1px solid var(--rule)}
+  .cell li:first-child{border-top:0}
+  .cell-empty{font-size:13.5px;color:var(--quiet);font-style:italic;margin-top:14px}
+
+  /* ---- items ---- */
+  .entry{width:100%;text-align:left;background:none;border:0;padding:10px 0;cursor:pointer;display:block}
+  .entry:hover .entry-title{text-decoration:underline;text-underline-offset:2px}
+  .entry-title{font-size:15px;line-height:1.32;display:block}
+  .entry-meta{font-family:var(--sans);font-size:11.5px;color:var(--quiet);margin-top:4px;display:block}
+  .flag{font-family:var(--sans);font-size:10px;border:1px solid var(--ink);padding:1px 5px;margin-left:6px;vertical-align:2px}
+  .detail{padding:0 0 14px;font-size:14px}
+  .detail[hidden]{display:none}
+  .detail p{margin:0 0 10px}
+  .detail .quote{border-left:2px solid var(--ink);padding-left:12px;margin:0 0 10px;font-size:13.5px}
+  .detail dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;margin:0 0 10px;font-family:var(--sans);font-size:12px}
+  .detail dt{color:var(--quiet)}
+  .detail dd{margin:0}
+  .detail a{font-family:var(--sans);font-size:12.5px}
+
+  /* ---- holding bay ---- */
+  .bay{border-top:2px solid var(--ink);padding-top:20px;margin-bottom:44px}
+  .bay h2{font-size:22px;margin:0 0 6px;font-weight:600}
+  .bay>p{margin:0 0 16px;color:var(--quiet);font-size:15px;max-width:62ch}
+  .bay ul{list-style:none;margin:0;padding:0;column-width:330px;column-gap:34px}
+  .bay li{break-inside:avoid;border-top:1px solid var(--rule);padding:9px 0}
+  .bay .why{font-family:var(--sans);font-size:11.5px;color:var(--quiet);display:block;margin-top:3px}
+
+  .method{border-top:1px solid var(--rule);padding:20px 0 60px;font-size:14px;color:var(--quiet);max-width:74ch}
+  .method h2{font-size:16px;color:var(--ink);margin:0 0 8px;font-weight:600}
+  .method p{margin:0 0 10px}
+  .empty-state{border:1px solid var(--rule);padding:28px;margin:20px 0 44px;font-size:15px;color:var(--quiet)}
+
+  @media(max-width:820px){
+    .grid{grid-template-columns:1fr}
+    .cell{min-height:0}
+    .matrix-frame{grid-template-columns:1fr;grid-template-rows:auto auto auto}
+    .y-axis{grid-row:1;grid-column:1;padding-bottom:8px}
+    .y-axis span{writing-mode:horizontal-tb;transform:none}
+    .grid{grid-row:2;grid-column:1}
+    .x-axis{grid-row:3;grid-column:1;padding-top:8px}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<section id="gate">
+  <div class="gate-inner">
+    <h1>Work Radar</h1>
+    <p>Evidence on the future of work, with a standing focus on hybrid and remote working.</p>
+    <form class="gate-form" id="gateForm">
+      <input id="pw" type="password" autocomplete="current-password" placeholder="Password" aria-label="Password">
+      <button type="submit">Enter</button>
+    </form>
+    <div class="gate-msg" id="gateMsg" role="status"></div>
+  </div>
+</section>
+
+<main id="app">
+  <header class="masthead">
+    <div class="wrap">
+      <h1>Work Radar</h1>
+      <p>What the research says about where work happens and whether it works. Scanned by hand from
+         top-tier work and employment journals and from government and institutional publishers.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="status" id="status"></div>
+
+    <div class="controls">
+      <input type="search" id="search" placeholder="Search titles, sources, findings" aria-label="Search the corpus">
+      <button class="toggle" id="onlyNew" type="button" aria-pressed="false">New this scan</button>
+      <button class="toggle" id="onlyStrong" type="button" aria-pressed="false">Experimental only</button>
+    </div>
+
+    <div id="board"></div>
+    <div id="bay"></div>
+
+    <section class="method">
+      <h2>How to read this</h2>
+      <p id="methodMatrix"></p>
+      <p id="methodSources"></p>
+      <p>Placement is a claim about the paper's own language, not a judgement about whether the paper
+         is right. Every placed item shows the sentence it was placed on, so you can disagree with it.
+         Items the scanner cannot place honestly are kept in the holding bay rather than pushed into a
+         quadrant, and a curator can pin or withdraw any placement.</p>
+    </section>
+  </div>
+</main>
+
+<script>
+const HASHES = [
+  "7f33b0bd08a0f2e5e6d9c1823b2aee7ca37aab92d1c21d9e34b25f860544474c",
+  "f9082a22630c3d9b7eb8644b88ad743832d644da027535dd09c37cde5c1c90ae"
+];
+
+const $ = s => document.querySelector(s);
+let DATA = null, filters = {q:"", onlyNew:false, onlyStrong:false};
+
+async function sha256(text){
+  const bytes = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest("SHA-256", bytes);
+  return [...new Uint8Array(hash)].map(b => b.toString(16).padStart(2,"0")).join("");
+}
+
+function unlock(){
+  sessionStorage.setItem("workRadarUnlocked","1");
+  $("#gate").style.display = "none";
+  $("#app").style.display = "block";
+  load();
+}
+
+$("#gateForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const field = $("#pw");
+  if (HASHES.includes(await sha256(field.value))) { unlock(); }
+  else { $("#gateMsg").textContent = "That password does not match. Try again."; field.select(); }
+});
+
+if (sessionStorage.getItem("workRadarUnlocked") === "1") unlock();
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+async function load(){
+  try {
+    const res = await fetch("work_radar.json?v=" + Date.now());
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    DATA = await res.json();
+  } catch (err) {
+    $("#board").innerHTML =
+      '<div class="empty-state">Could not load <code>work_radar.json</code>. ' +
+      'Run the scan workflow once, then reload this page.</div>';
+    return;
+  }
+  if (!DATA.items) DATA.items = [];
+  renderStatus(); renderMethod(); render();
+  $("#search").addEventListener("input", e => { filters.q = e.target.value.toLowerCase().trim(); render(); });
+  bindToggle("#onlyNew","onlyNew"); bindToggle("#onlyStrong","onlyStrong");
+}
+
+function bindToggle(sel, key){
+  $(sel).addEventListener("click", e => {
+    filters[key] = !filters[key];
+    e.currentTarget.setAttribute("aria-pressed", String(filters[key]));
+    render();
+  });
+}
+
+function renderStatus(){
+  const s = DATA.stats || {};
+  const when = DATA.last_updated ? DATA.last_updated.replace("T"," ").replace("Z"," UTC") : "never";
+  $("#status").innerHTML =
+    `<span>Last scan <b>${esc(when)}</b></span>` +
+    `<span>In corpus <b>${s.corpus_size ?? 0}</b></span>` +
+    `<span>New this scan <b>${s.new_this_scan ?? 0}</b></span>` +
+    `<span>Placed <b>${s.placed ?? 0}</b></span>` +
+    `<span>Held unplaced <b>${s.unplaced ?? 0}</b></span>` +
+    `<span>Run time <b>${s.run_seconds ?? DATA.run_seconds ?? "?"}s</b></span>` +
+    `<button type="button" id="lock">Lock</button>`;
+  $("#lock").addEventListener("click", () => {
+    sessionStorage.removeItem("workRadarUnlocked"); location.reload();
+  });
+}
+
+function renderMethod(){
+  $("#methodMatrix").textContent = DATA.matrix_policy || "";
+  $("#methodSources").textContent = DATA.source_policy || DATA.admission_policy || "";
+}
+
+function passes(item){
+  if (filters.onlyNew && !item.new_this_scan) return false;
+  if (filters.onlyStrong && item.evidence_strength !== "experimental"
+      && item.evidence_strength !== "quasi_experimental") return false;
+  if (!filters.q) return true;
+  const hay = [item.title, item.source, item.authors, item.abstract,
+               (item.matrix_evidence_sentences || []).join(" ")].join(" ").toLowerCase();
+  return hay.includes(filters.q);
+}
+
+function entryHTML(item, index){
+  const id = "d" + index;
+  const flags = (item.new_this_scan ? '<span class="flag">new</span>' : "")
+    + (item.placement_source === "curator" ? '<span class="flag">curated</span>' : "");
+  const strength = item.evidence_strength && item.evidence_strength !== "unspecified"
+    ? item.evidence_strength.replace(/_/g," ") : "";
+  return `
+    <button class="entry" type="button" aria-expanded="false" aria-controls="${id}">
+      <span class="entry-title">${esc(item.title)}${flags}</span>
+      <span class="entry-meta">${esc(item.source)} · ${esc(item.date)}${strength ? " · " + esc(strength) : ""}</span>
+    </button>
+    <div class="detail" id="${id}" hidden>
+      ${(item.matrix_evidence_sentences || []).slice(0,2)
+          .map(s => `<p class="quote">${esc(s)}</p>`).join("")}
+      ${item.curator_note ? `<p><em>Curator note.</em> ${esc(item.curator_note)}</p>` : ""}
+      <dl>
+        <dt>Authors</dt><dd>${esc(item.authors)}</dd>
+        <dt>Source</dt><dd>${esc(item.source)} (${esc(item.source_tier)})</dd>
+        <dt>Placed on</dt><dd>${esc((item.matrix_y_evidence || []).join(", ") || "—")}</dd>
+        <dt>Arrangement</dt><dd>${esc((item.matrix_x_evidence || []).slice(0,5).join(", ") || "—")}</dd>
+        <dt>Placed by</dt><dd>${esc(item.placement_source || "classifier")}</dd>
+      </dl>
+      ${item.link ? `<a href="${esc(item.link)}" target="_blank" rel="noopener">Open the source</a>` : ""}
+    </div>`;
+}
+
+function render(){
+  const items = DATA.items.filter(passes);
+  const cells = DATA.matrix_cells || {};
+  const axes = DATA.matrix_axes || {};
+  const order = ["more_remote-higher_effectiveness","less_remote-higher_effectiveness",
+                 "more_remote-lower_effectiveness","less_remote-lower_effectiveness"];
+
+  const board = order.map(key => {
+    const meta = cells[key] || {label:key, reading:""};
+    const inCell = items.filter(i => i.matrix_cell === key);
+    const body = inCell.length
+      ? `<ul>${inCell.map((i, n) => `<li>${entryHTML(i, key + n)}</li>`).join("")}</ul>`
+      : `<p class="cell-empty">Nothing here yet.</p>`;
+    return `<div class="cell">
+      <div class="cell-head"><h2>${esc(meta.label)}</h2><span class="n">${inCell.length}</span></div>
+      <p class="cell-read">${esc(meta.reading)}</p>
+      ${body}
+    </div>`;
+  }).join("");
+
+  const xHigh = axes.x?.high_label || "Remote / hybrid";
+  const xLow  = axes.x?.low_label  || "On-site";
+  const yHigh = axes.y?.high_label || "Higher effectiveness";
+  const yLow  = axes.y?.low_label  || "Lower effectiveness";
+
+  $("#board").innerHTML = DATA.items.length === 0
+    ? `<div class="empty-state">The corpus is empty. Run the scan workflow from the Actions tab to fill it.</div>`
+    : `<div class="matrix-frame">
+         <div class="y-axis"><span>${esc(yHigh)} \u2191</span><span>\u2193 ${esc(yLow)}</span></div>
+         <div class="grid">${board}</div>
+         <div class="x-axis"><span>\u2190 ${esc(xHigh)}</span><span>${esc(xLow)} \u2192</span></div>
+       </div>`;
+
+  const unplaced = items.filter(i => !i.matrix_cell);
+  $("#bay").innerHTML = unplaced.length === 0 ? "" : `
+    <section class="bay">
+      <h2>Holding bay (${unplaced.length})</h2>
+      <p>On topic and from a listed source, but the scanner could not place them without guessing.
+         Most say what they studied without saying which way the result went.</p>
+      <ul>${unplaced.map((i, n) => `
+        <li>
+          ${entryHTML(i, "u" + n)}
+          <span class="why">${esc(i.matrix_unplaced_reason || "no reason recorded")}</span>
+        </li>`).join("")}</ul>
+    </section>`;
+
+  document.querySelectorAll(".entry").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const panel = document.getElementById(btn.getAttribute("aria-controls"));
+      const open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      panel.hidden = open;
+    });
+  });
+}
+</script>
+</body>
+</html>

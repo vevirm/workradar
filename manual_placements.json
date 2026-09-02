@@ -1,0 +1,11 @@
+{
+  "_comment": "Curator overrides. The scanner applies these on every run, to new and existing items alike. Set matrix_cell to one of the four cell keys to pin a placement, or to an empty string to hold an item out of the matrix. Match on link (preferred) or title. The entry below is a real, working example taken from the shipped corpus: the paper finds a gendered wage penalty, but its abstract framing reads positive to the classifier. Delete or replace it once you have run your own scans.",
+  "placements": [
+    {
+      "link": "https://doi.org/10.1177/09500170251336943",
+      "title": "Is Workplace Flexibility Penalised? The Gendered Consequences of Working from Home for the Wages of Parents and Childless Employees in the UK",
+      "matrix_cell": "more_remote-lower_effectiveness",
+      "note": "Finding is a gendered wage penalty. The classifier read the abstract's framing as positive."
+    }
+  ]
+}

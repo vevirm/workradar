@@ -1,0 +1,2438 @@
+{
+ "topic": "Future of work, with a standing focus on hybrid and remote working",
+ "config_version": "1.0.0",
+ "last_updated": "2026-09-02T16:59Z",
+ "run_started_at": "2026-09-02T16:58Z",
+ "run_completed_at": "2026-09-02T16:59Z",
+ "run_seconds": 86.5,
+ "scan_budget_seconds": 260,
+ "trigger": "manual",
+ "corpus_start_date": "2024-03-02",
+ "extended_corpus_start_date": "2022-09-02",
+ "admission_policy": "An item is admitted only when the text carries (1) work/employment aboutness, (2) explicit hybrid/remote/on-site location-of-work evidence, and (3) a recognised top-tier journal or a listed government/institutional publisher. Matrix placement is a separate, stricter evidence test and never a condition of admission: unplaced items stay in the corpus and are shown in the holding bay.",
+ "matrix_policy": "The horizontal axis records which working arrangement the evidence actually speaks to: remote and hybrid on one side, on-site and return-to-office on the other. Explicit return-to-office and mandate language is weighted more heavily than passing mentions of an office. The vertical axis reads effectiveness compositionally: a valence word is paired with an outcome noun within a short window, and the noun's orientation decides the sign, so reduced turnover counts as higher effectiveness while reduced productivity counts as lower. Negation is scoped to the clause before each match, and null markers such as 'unaffected' or 'mixed findings' suppress a pair rather than voting. Placement needs a margin on both axes and at least one sentence where arrangement and outcome co-occur. Items that meet only one axis are held as unplaced rather than guessed into a cell.",
+ "matrix_axes": {
+  "x": {
+   "name": "Arrangement the evidence speaks to",
+   "low": "less_remote",
+   "high": "more_remote",
+   "low_label": "On-site / return to office",
+   "high_label": "Remote / hybrid"
+  },
+  "y": {
+   "name": "Effect on effectiveness",
+   "low": "lower_effectiveness",
+   "high": "higher_effectiveness",
+   "low_label": "Lower effectiveness",
+   "high_label": "Higher effectiveness"
+  }
+ },
+ "matrix_cells": {
+  "more_remote-higher_effectiveness": {
+   "label": "Distributed gain",
+   "reading": "Studies remote or hybrid working and finds effectiveness holds up or improves."
+  },
+  "more_remote-lower_effectiveness": {
+   "label": "Distance cost",
+   "reading": "Studies remote or hybrid working and finds effectiveness falls."
+  },
+  "less_remote-higher_effectiveness": {
+   "label": "Proximity premium",
+   "reading": "Studies on-site or return-to-office working and finds effectiveness improves."
+  },
+  "less_remote-lower_effectiveness": {
+   "label": "Return-to-office drag",
+   "reading": "Studies on-site or return-to-office working and finds effectiveness falls."
+  }
+ },
+ "matrix_counts": {
+  "more_remote-higher_effectiveness": 5,
+  "more_remote-lower_effectiveness": 8,
+  "less_remote-higher_effectiveness": 0,
+  "less_remote-lower_effectiveness": 1,
+  "unplaced": 32
+ },
+ "stats": {
+  "corpus_size": 46,
+  "new_this_scan": 0,
+  "placed": 14,
+  "unplaced": 32,
+  "raw_candidates": 273,
+  "abstracts_recovered": 0,
+  "admitted_this_run": 0,
+  "openalex_queries_run": 0,
+  "crossref_queries_run": 11,
+  "crossref_journals_run": 10,
+  "institutions_reached": 5,
+  "rescue_ran": false
+ },
+ "diagnostics": {
+  "abstract_rescue_queued": 4,
+  "crossref_items_seen": 897,
+  "crossref_source_not_listed": 660,
+  "http_429": 39,
+  "http_status_error": 36,
+  "reject_boilerplate": 1,
+  "reject_no_date": 10,
+  "reject_not_english": 4,
+  "reject_off_topic": 145,
+  "reject_thin_abstract": 68,
+  "reject_thin_page": 8,
+  "reject_title too short": 1,
+  "reject_too_old": 13,
+  "skip_known_crossref": 29
+ },
+ "warnings": [
+  "OpenAlex returned nothing this run"
+ ],
+ "scan_state": {
+  "openalex_cursor": 0,
+  "journal_issn": {
+   "journal of labor economics": "0734-306X",
+   "ilr review": "0019-7939",
+   "work employment and society": "0950-0170",
+   "new technology work and employment": "0268-1072",
+   "human resource management journal": "0954-5395",
+   "journal of applied psychology": "0021-9010",
+   "personnel psychology": "0031-5826",
+   "journal of organizational behavior": "0894-3796",
+   "organization science": "1047-7039",
+   "management science": "0025-1909",
+   "labour economics": "0927-5371",
+   "british journal of industrial relations": "0007-1080",
+   "journal of occupational and organizational psychology": "0963-1798",
+   "european journal of work and organizational psychology": "1359-432X",
+   "gender work organization": "",
+   "human relations": "0018-7267"
+  },
+  "crossref_cursor": 24,
+  "crossref_journal_cursor": 10,
+  "institution_cursor": 16,
+  "openalex_depth": {},
+  "last_completed_at": "2026-09-02T16:59Z",
+  "rescue_cursor": 14
+ },
+ "scan_history": [
+  {
+   "started_at": "2026-09-02T16:42Z",
+   "completed_at": "2026-09-02T16:43Z",
+   "seconds": 84.9,
+   "new_items": 46,
+   "corpus_size": 46,
+   "rescue_ran": false
+  },
+  {
+   "started_at": "2026-09-02T16:58Z",
+   "completed_at": "2026-09-02T16:59Z",
+   "seconds": 86.5,
+   "new_items": 0,
+   "corpus_size": 46,
+   "rescue_ran": false
+  }
+ ],
+ "institution_seen_cache": {
+  "https://www.brookings.edu/research-library-and-archives": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/research-programs": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/ltrc-our-work": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/research-commentary": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/articles/omnibus-budget-reform-why-how": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/about-us/research-independence-and-integrity-policies": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/policy-and-procedures-on-financial-conflict-of-interest-in-public-health-service-funded-research": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/articles/campaign-finance-reform": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/blueprints-for-american-renewal-and-prosperity/racial-justice-and-worker-mobility": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/articles/institutional-reform-proposals": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/articles/united-states-security-interests-in-the-post-cold-war-world": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/articles/biennial-budgeting-act-of-1995": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/articles/u-s-policy-toward-iraq": "2026-09-02T16:59Z",
+  "https://www.brookings.edu/articles/institutional-reform-proposals-for-the-105th-congress": "2026-09-02T16:59Z",
+  "https://www.worldbank.org/en/regulatoryefficiency/publications": "2026-09-02T16:59Z",
+  "https://www.worldbank.org/en/businessready/publications": "2026-09-02T16:59Z",
+  "https://openknowledge.worldbank.org/entities/publication/c35564b6-20e5-4606-a9df-d5735f8481d3": "2026-09-02T16:59Z",
+  "https://openknowledge.worldbank.org/entities/publication/36565aae-1380-44c7-8d49-0dae7901cde2": "2026-09-02T16:59Z",
+  "https://openknowledge.worldbank.org/entities/publication/98b8f3d6-6544-4f9f-b6ac-df9299c7ff92": "2026-09-02T16:59Z",
+  "https://documents.worldbank.org/en/publication/documents-reports/documentlist": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/research-and-insights/publications": "2026-09-02T16:59Z",
+  "https://openknowledge.worldbank.org/entities/publication/90bd2d7f-9fdb-456d-b257-662c60f37835": "2026-09-02T16:59Z",
+  "https://openknowledge.worldbank.org/entities/publication/c9723b60-b532-438f-9e1c-ea016ca5912a": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/publications/community-development-perspectives": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/about-us/economic-research/center-for-monetary-research/research-and-publications/center-for-monetary-research-economic-letters": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/about-us/regional-engagement/community-engagement-and-analysis/publications": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/about-us/economic-research/center-for-monetary-research/research-and-publications/center-for-monetary-research-working-papers": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/about-us/economic-research/center-for-monetary-research/research-and-publications": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/2025/12/19/economic-letter-countdown-most-read-topics-2025": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/about-us/regional-engagement/community-engagement-and-analysis/publications/community-investments": "2026-09-02T16:59Z",
+  "https://openknowledge.worldbank.org/entities/publication/e96798d7-a81d-44ea-8287-1b4d6ea83f75": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/about-us/economic-research/center-pacific-basin-studies/cpbs-publications": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/2016/12/30/top-5-economic-letters-2016-wages-low-natural-real-rate-interest": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/2025/09/05/economic-letter-video-the-zero-lower-bound-explained": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/2025/05/14/economic-letter-video-the-changing-disparity-in-prices-across-states": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/2024/09/04/economic-letter-video-pandemic-era-liquid-wealth-is-running-dry": "2026-09-02T16:59Z",
+  "https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/2024/08/19/economic-letter-video-breakeven-employment-growth": "2026-09-02T16:59Z",
+  "https://nber.org/digest": "2026-09-02T16:59Z",
+  "https://www.nber.org/digest": "2026-09-02T16:59Z",
+  "https://nber.org/digest/202609/urban-congestion-pricing-and-response-times-emergency-medical-services": "2026-09-02T16:59Z",
+  "https://www.nber.org/papers/w35414": "2026-09-02T16:59Z",
+  "https://nber.org/papers/w35414": "2026-09-02T16:59Z",
+  "https://nber.org/digest/202109/generational-effects-welfare-reform-food-insecurity": "2026-09-02T16:59Z",
+  "https://nber.org/digest/nov03/advertising-and-price-effects-adolescent-drinking": "2026-09-02T16:59Z",
+  "https://www.iza.org/cms/language/en/publications/dp": "2026-09-02T16:59Z",
+  "https://nber.org/digest/jan09/welfare-reform-has-led-more-work-less-education": "2026-09-02T16:59Z",
+  "https://www.iza.org/cms/language/de/publications/dp": "2026-09-02T16:59Z",
+  "https://www.iza.org/publications/dp": "2026-09-02T16:59Z",
+  "https://www.iza.org/publications": "2026-09-02T16:59Z",
+  "https://iza.org/publications": "2026-09-02T16:59Z",
+  "https://nber.org/programs-projects/programs-working-groups/labor-studies": "2026-09-02T16:59Z",
+  "https://iza.org/publications/dp": "2026-09-02T16:59Z",
+  "https://iza.org/publications/subscription": "2026-09-02T16:59Z",
+  "https://openknowledge.worldbank.org/entities/publication/2807ed57-114f-42f9-b455-12625354383c": "2026-09-02T16:59Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2025-36790_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2025-36602_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2025-37273_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2023-17004_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/fad-2010-0248_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2025-34973_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2025-35876_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2024-33034_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/fad-2013-0031_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2025-36470_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/fad-2007-0012_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2025-36011_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/feed-2025-37251_en": "2026-09-02T16:43Z",
+  "https://joint-research-centre.ec.europa.eu/reports-and-technical-documentation/fad-2010-0129_en": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1992/dec/cp-s-1-2.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1870/dec/instructions-to-assistant-marshalls--1870.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1870/dec/the-garfield-report-to-congress-from-the-committee-on-the-ninth-.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1814/dec/volume-2.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1832/dec/1830-census-abstract.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1890/dec/census-bulletins--numbers-1-380--1889-1894.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/oecd-wirtschaftsausblick-zwischenausgabe-marz-2009_eco_outlook-v2008-sup2-de.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1890/dec/population-of-the-united-states-by-minor-civil-divisions-as-retu.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/oecd-wirtschaftsausblick-ausgabe-2009-1_eco_outlook-v2009-1-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/handbuch-geldwasche-und-terrorismusfinanzierung-fur-den-innen-und-au-endienst-der-steuerverwaltung_02c1eb46-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/oecd-insights-internationale-migration_9789264075740-de.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1801/dec/return.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/die-oecd-in-zahlen-2009_9789264073999-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/renten-auf-einen-blick-2009_9789264076105-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/bildung-auf-einen-blick-2009_9789264079830-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/regierung-und-verwaltung-auf-einen-blick-2009_9789264080331-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/handbuch-geldwasche-fur-den-innen-und-au-endienst-der-steuerverwaltung_57cb8ded-de.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1992/dec/cp-1.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/agrarpolitik-in-den-oecd-landern-2009_9789264076945-de.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1872.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1793.html": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/web/main/home": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1832.html": "2026-09-02T16:43Z",
+  "https://www.census.gov/library/publications/1893.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/gesellschaft-auf-einen-blick-2009_soc_glance-2009-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/leitfaden-zur-bekampfung-von-angebotsabsprachen-im-offentlichen-beschaffungswesen_fd57e2c6-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/entwicklungszusammenarbeit-bericht-2009_dcr-2009-de.html": "2026-09-02T16:43Z",
+  "https://www.oecd.org/de/publications/oecd-insights-internationaler-handel_9789264060531-de.html": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/data/database": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/c/portal/update_language": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/web/experimental-statistics": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/data/stats-finder-a-z": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/c/portal/login": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/home": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/data/statistical-themes": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/data/web-services": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/data": "2026-09-02T16:43Z",
+  "https://www.ilo.org/integrate-research-and-publications": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/web/education-corner/overview": "2026-09-02T16:43Z",
+  "https://www.ilo.org/meetings-and-events/safeyouthwork-project-briefing-stakeholders-and-partners": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/data/data-visualisations": "2026-09-02T16:43Z",
+  "https://ec.europa.eu/eurostat/data/bulkdownload": "2026-09-02T16:43Z",
+  "https://www.ilo.org/international-labour-conference/114th-session-international-labour-conference/reports-and-documents-submitted-114th-session-international-labour": "2026-09-02T16:43Z",
+  "https://www.ilo.org/audit-reports": "2026-09-02T16:43Z",
+  "https://www.ilo.org/research-and-publications/ilo-library-knowledge-hub/about-ilo-library": "2026-09-02T16:43Z",
+  "https://www.ilo.org/about-ilo/ilo-financial-management/financial-reports-financial-statements-and-reports-external-auditor": "2026-09-02T16:43Z",
+  "https://www.ilo.org/international-labour-conference/114th-session-international-labour-conference/committees-114th-session-international-labour-conference/committee-application-standards-can-2026/discussion-cases-serious-failure-report-can-2026": "2026-09-02T16:43Z",
+  "https://www.ilo.org/international-labour-standards/applying-and-promoting-international-labour-standards-overview-ilo/constitutional-reporting-and-other-standards-related-obligations-resources": "2026-09-02T16:43Z",
+  "https://www.ilo.org/papers-and-briefs": "2026-09-02T16:43Z",
+  "https://www.ilo.org/project-reports-and-articles": "2026-09-02T16:43Z",
+  "https://www.ilo.org/list-impact-insurance-working-papers": "2026-09-02T16:43Z",
+  "https://www.ilo.org/international-labour-conference/114th-session-international-labour-conference/committees-114th-session-international-labour-conference/committee-application-standards-can-2026/report-committee-can-2026": "2026-09-02T16:43Z",
+  "https://www.ilo.org/international-labour-standards/maritime-labour-convention-2006-0/text-and-preparatory-reports-maritime-labour-convention-2006": "2026-09-02T16:43Z",
+  "https://www.ilo.org/international-labour-standards/applying-and-promoting-international-labour-standards-overview-ilo/future-reporting-ratified-conventions": "2026-09-02T16:43Z"
+ },
+ "items": [
+  {
+   "title": "How and when remote workdays impact employee daily social need fulfilment",
+   "authors": "Vera M. Schweitzer, Anne Burmeister, Laura Venz, Fabiola H. Gerpott, Ulrike Fasbender, Yixuan Li",
+   "source": "Journal of Occupational and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-09-01",
+   "link": "https://doi.org/10.1111/joop.70150",
+   "type": "peer-reviewed article",
+   "abstract": "Abstract Hybrid working, as a now‐common flexible work arrangement, transforms how employees connect with each other and requires updated theorizing to understand its social implications. Grounded in interaction ritual theory, we examined how and when remote (vs. onsite) workdays impact employees' social need fulfilment, namely, coworkers making employees feel that they belong and that their uniqueness is valued. We propose that remote (vs. onsite) workdays distance employees from basic, natural and potentially energizing interaction rituals such as coworker small talk, with negative consequences for employees' fulfilment of uniqueness and belongingness needs at work. We further argue that organizations and their members can mitigate the negative social effects of remote (vs. onsite) workdays by implementing social virtual meeting rituals that serve relevant psycho‐social functions for mutual attunement with coworkers. Two experience sampling studies found support for our theorizing. Remote (vs. onsite) workdays had negative indirect effects on employees' uniqueness and belongingness at work via coworker small talk and relational energy. The negative indirect effect was buffered by social virtual meeting rituals—a contextual feature of virtual communication. Our research adds a psycho‐social lens to hybrid work research and sheds light on how organizations can foster inclusion by fulfilling employees' social needs.",
+   "work_evidence": [
+    "work",
+    "employee",
+    "employees"
+   ],
+   "location_evidence": [
+    "hybrid work",
+    "hybrid working",
+    "flexible work arrangement"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Journal of Occupational and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": -5.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Our research adds a psycho‐social lens to hybrid work research and sheds light on how organizations can foster inclusion by fulfilling employees' social needs."
+   ],
+   "matrix_x_evidence": [
+    "flexible work arrangement",
+    "hybrid work",
+    "hybrid working",
+    "onsite"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Repatterning Interactions in Remote Work Environments: Bolstering Psychological Safety Through Mutually Humanizing Self-Disclosure",
+   "authors": "Vanessa M. Conzon",
+   "source": "Organization Science",
+   "source_tier": "Tier 1",
+   "source_kind": "scholarly",
+   "date": "2026-08-21",
+   "link": "https://doi.org/10.1287/orsc.2024.19818",
+   "type": "peer-reviewed article",
+   "abstract": "Existing research on psychological safety suggests that remote work might make it more challenging for workers to engage in the sorts of interactions that promote psychological safety. This raises the question: How is psychological safety bolstered when groups work remotely? Drawing on data from a 7-year longitudinal qualitative study—including 275 interviews and approximately 330 hours of observations—of a professional services organization that shifted from an in-person to a remote work environment, I present a process model of how psychological safety can be strengthened among workers interacting virtually. I find that remote work supports interactional patterns that facilitate self-disclosure among group members. Learning more about one another, workers become mutually humanized, and psychological safety is bolstered. This psychological safety is accompanied by a set of associated practices that help people coordinate on work tasks while also sustaining flexibility in where and when they work. Reflecting improved psychological safety and associated practices, group members attend to and accomplish both work tasks and nonwork activities. This study contributes to the psychological safety literature by identifying a distinct process through which psychological safety can be promoted in remote work environments: mutual humanization via self-disclosure, which is supported through interactional patterns facilitated by remote work. Importantly, this distinct group-initiated process expands theorization beyond its current focus on leader-initiated social learning. This study also identifies how psychological safety supports role management, integrating theories of psychological safety and work-nonwork roles to expand understanding of psychological safety’s positive consequences.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "organization",
+    "management"
+   ],
+   "location_evidence": [
+    "remote work"
+   ],
+   "effect_evidence": [
+    "learning"
+   ],
+   "discovered_via": "crossref-journal:Organization Science",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 3.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "in person",
+    "remote work",
+    "remotely"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "longitudinal",
+    "interviews"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Steady as She Goes: Remote Work Benefits Daily Goal Progress Through Reduced Energy Variability",
+   "authors": "Andrew A. Bennett, Kathleen R. Keeler, Emily D. Campion, Sheila K. Keener",
+   "source": "Organization Science",
+   "source_tier": "Tier 1",
+   "source_kind": "scholarly",
+   "date": "2026-08-06",
+   "link": "https://doi.org/10.1287/orsc.2025.20962",
+   "type": "peer-reviewed article",
+   "abstract": "As the prevalence and allowance of remote and hybrid work evolves, research has shown consistently mixed findings about how work location is related to worker energy and perceptions of daily performance. We aim to resolve this ambiguity by integrating affective events theory with ideas about emotion dynamics to develop new theorizing explaining why energy variability, rather than mean energy level, is an important predictor of daily goal progress. We test our hypotheses using a sample of 219 employees from one organization allowing remote and hybrid work, capturing individual hourly energy levels for five consecutive workdays (4,812 hourly observations). Our results show that on days when employees work from home (versus onsite), they have lower energy variability, which enables them to make more progress toward their goals and achieve their goals at a faster rate than expected that day. Moreover, we show that this effect is stronger when employees have higher remote work intensity (i.e., work from home more often). Our findings are robust to a number of controls (e.g., children at home, work location choice, industry). Practically, workers experience about 33% less energy variability on days working from home compared with onsite, and a one-point reduction in energy variability yields 26% higher goal progress and 31% higher goal progress velocity. Overall, this study advances theory on the relationship between daily work location, human energy, and goal progress and has immediate practical implications for employees, teams, and organizations as they continue to navigate the remote and hybrid era of work. History: This paper has been accepted for the Organization Science Special Issue on Remote and Hybrid Work: Transforming People and Organizations in a New Era. Funding: This work was supported by a Tippie College of Business Research Excellence Grant at the University of Iowa.",
+   "work_evidence": [
+    "work",
+    "worker",
+    "workers",
+    "employees",
+    "teams",
+    "organization"
+   ],
+   "location_evidence": [
+    "remote work",
+    "work from home",
+    "working from home",
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "performance"
+   ],
+   "discovered_via": "crossref-journal:Organization Science",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 6.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Steady as She Goes: Remote Work Benefits Daily Goal Progress Through Reduced Energy Variability As the prevalence and allowance of remote and hybrid work evolves, research has shown consistently mixed findings about how work location is related to worker energy and perceptions of daily performance.",
+    "Our results show that on days when employees work from home (versus onsite), they have lower energy variability, which enables them to make more progress toward their goals and achieve their goals at a faster rate than expected that day.",
+    "Practically, workers experience about 33% less energy variability on days working from home compared with onsite, and a one-point reduction in energy variability yields 26% higher goal progress and 31% higher goal progress velocity."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "onsite",
+    "remote work",
+    "work from home",
+    "working from home"
+   ],
+   "matrix_y_evidence": [
+    "benefits + goal progress",
+    "higher + goal progress",
+    "reduced + goal progress",
+    "reduction + goal progress"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "The Intensification–Extensification Dynamic: Hybrid Work and Digital Connectivity",
+   "authors": "Abigail Marks, Gustav Bösehans, Oliver Mallett",
+   "source": "Work, Employment and Society",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-08-01",
+   "link": "https://doi.org/10.1177/09500170261424133",
+   "type": "peer-reviewed article",
+   "abstract": "This article examines how remote and hybrid work reshape the spatio-temporal organisation of labour through the dynamics of intensification and extensification. Drawing on three waves of survey data, each with over 1000 participants during and after the COVID-19 pandemic, alongside longitudinal interviews with 90 participants, the analysis shows that information and communication technology (ICT)-driven intensification undermines wellbeing by generating work–life conflict. Extensification – the temporal, spatial and psychological diffusion of work – both enables and is reinforced by intensification. Gendered differences emerge, especially for women with care roles who experience greater cumulative burdens once hybrid work becomes established. Material resources, such as housing and digital infrastructure, can also stratify experiences. The article concludes that ICT-enabled hybrid work produces a new spatio-temporal regime in which intensification and extensification interact to deepen inequalities.",
+   "work_evidence": [
+    "work",
+    "labour",
+    "organisation"
+   ],
+   "location_evidence": [
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "wellbeing"
+   ],
+   "discovered_via": "crossref-journal:Work, Employment and Society",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 3.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "hybrid work"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "survey",
+    "longitudinal",
+    "interviews"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Does Working from Home Improve Employees’ Productivity? Empirical Evidence from a Meta-Analysis",
+   "authors": "Colin F. Mang, Amar Anwar",
+   "source": "ILR Review",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-07-05",
+   "link": "https://doi.org/10.1177/00197939261456260",
+   "type": "peer-reviewed article",
+   "abstract": "This meta-analysis employs 3,574 estimates from 82 studies to assess how working from home (WFH) affected employee productivity before and after the start of the COVID-19 pandemic. The authors find a small but positive average effect, driven by gains in hourly productivity and increased hours worked. Pre-pandemic, benefits were concentrated among hybrid workers, while during the pandemic, both hybrid and remote workers benefited. The effect varies by sex, parental status, and global region. The authors detect publication bias in both pre-pandemic studies and those employing data from the pandemic. Using Bayesian model averaging, they correct for publication bias, heterogeneity in research design, data quality, and estimation method, to produce more reliable estimates of the impact of WFH on productivity. Findings suggest WFH can modestly enhance productivity, but outcomes are context dependent. The authors identify key evidence gaps to guide future research and recommend that managers and policymakers adopt flexible, evidence-informed telework strategies.",
+   "work_evidence": [
+    "workers",
+    "employee",
+    "employees",
+    "managers"
+   ],
+   "location_evidence": [
+    "working from home",
+    "wfh",
+    "telework"
+   ],
+   "effect_evidence": [
+    "productivity",
+    "hours worked"
+   ],
+   "discovered_via": "crossref-journal:ILR Review",
+   "matrix_cell": "more_remote-higher_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "higher_effectiveness",
+   "matrix_x_score": 6.0,
+   "matrix_y_score": 2.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Does Working from Home Improve Employees’ Productivity?",
+    "Empirical Evidence from a Meta-Analysis This meta-analysis employs 3,574 estimates from 82 studies to assess how working from home (WFH) affected employee productivity before and after the start of the COVID-19 pandemic.",
+    "Using Bayesian model averaging, they correct for publication bias, heterogeneity in research design, data quality, and estimation method, to produce more reliable estimates of the impact of WFH on productivity."
+   ],
+   "matrix_x_evidence": [
+    "telework",
+    "wfh",
+    "working from home"
+   ],
+   "matrix_y_evidence": [
+    "enhance + productivity",
+    "improve + productivity"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Until Work From Home Do Us Apart? Couples' Segmentation Preferences and Relationship Dissolution in the Era of Remote Work",
+   "authors": "Alejandro Canek Hermida Carrillo, Felix Bölingen, Russell A. Matthews, Ingo Weller",
+   "source": "Journal of Organizational Behavior",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-07-01",
+   "link": "https://doi.org/10.1002/job.70095",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT Work from home (WFH) is recognized as carrying both risks and benefits for individuals. However, its impact on romantic couples remains poorly understood. Drawing on boundary theory and family systems theory, we propose that WFH can render certain couples vulnerable to separation and trace the process through which this occurs. Specifically, when romantic partners hold incongruent preferences for segmenting work and home, or when both have a high preference for segmentation, WFH employees might experience heightened work‐to‐home conflict. This conflict drains resources needed for intimacy, fostering mutual loneliness and, ultimately, relationship dissolution deliberations. Across two longitudinal studies of dual‐earner couples in Germany ( n = 170, n = 1561), we found nuanced support for this model. Dyadic response surface analyses showed that incongruent segmentation preferences affected the work‐to‐home conflict of employees in divergent ways—exacerbating it for some, mitigating it for others. As expected, a joint preference for segmentation was consistently associated with heightened work‐to‐home conflict in WFH employees. Work‐to‐home conflict was linked to loneliness in both partners, which explained dissolution deliberations. Overall, our research highlights that WFH is a work arrangement that has couple‐level consequences—beneficial for some, but a risk factor for others.",
+   "work_evidence": [
+    "work",
+    "employees"
+   ],
+   "location_evidence": [
+    "remote work",
+    "work from home",
+    "wfh"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Journal of Organizational Behavior",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 10.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Specifically, when romantic partners hold incongruent preferences for segmenting work and home, or when both have a high preference for segmentation, WFH employees might experience heightened work‐to‐home conflict.",
+    "As expected, a joint preference for segmentation was consistently associated with heightened work‐to‐home conflict in WFH employees."
+   ],
+   "matrix_x_evidence": [
+    "remote work",
+    "wfh",
+    "work from home"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "longitudinal"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Remote4All: Voicing the Lived Experiences of Disabled and/or Neurodivergent Remote Workers",
+   "authors": "Christine Grant, Maria Charalampous, Carlo Tramontano, Emma Russell",
+   "source": "New Technology, Work and Employment",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-07-01",
+   "link": "https://doi.org/10.1111/ntwe.70027",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT Disabled and/or neurodivergent people form 20% of the UK working population but their experience of remote working has been overlooked in research and practice. This research gave a voice to this community of workers to express their lived experience about how remote working can help to support their specific needs. Employing a qualitative design, we interviewed 24 disabled and/or neurodivergent remote workers across various UK organizations and sectors. Using Conservation of Resources theory, we identified (through thematic analysis) eight themes associated with conditional resources that, when configured in different combinations (referred to as resource ‘caravans’) can support the development and sustenance of personal resources to fulfil three key resource needs. These key resource needs involve being able to Control the Sensory Environment, Manage Conditions and Present Authentic Self‐expressions. These needs emerged as specifically important for this group of workers and were likely to be fulfilled through remote and hybrid working arrangements. We encourage organizations to invest in these caravans of conditional resources, to enable flourishing in relation to the key needs of disabled and/or neurodivergent workers, and to promote sustainable, inclusive and fair remote working for all.",
+   "work_evidence": [
+    "workers"
+   ],
+   "location_evidence": [
+    "remote working",
+    "hybrid working"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:New Technology, Work and Employment",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 4.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "hybrid working",
+    "remote working"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Political Heterogeneity and Societal Polarization Impair Individual Performance: Evidence from Random Assignment in Professional Golf",
+   "authors": "Tim Sels, Balázs Kovács",
+   "source": "Management Science",
+   "source_tier": "Tier 1",
+   "source_kind": "scholarly",
+   "date": "2026-07-01",
+   "link": "https://doi.org/10.1287/mnsc.2023.01798",
+   "type": "peer-reviewed article",
+   "abstract": "We examine how political heterogeneity in groups affects individual performance in settings where people work alongside others. Leveraging the random assignment of golfers to groups in Professional Golfers’ Association Tour tournaments, we find that golfers score 0.2 strokes better per round when playing in politically homogeneous versus heterogeneous groups. This corresponds to a five-rank improvement before the tournament cut and an additional $13,000–$23,400 in tournament earnings. The effect intensifies during periods of high societal political polarization and diminishes when polarization is low. We propose that politically heterogeneous groups create a more stressful and less psychologically safe environment, reducing focus and leading to reduced performance. Consistent with this mechanism, analyses of shot-level data reveal that this effect is strongest during driving and putting shots when players are in close physical proximity. Our study contributes to the understanding of how political heterogeneity in groups affects individual performance in competitive settings, with implications for managing ideological differences in organizations. This paper was accepted by Sameer Srivastava, organizations. Funding: The authors appreciate financial help from Yale University and Fox International [fellowship]. Supplemental Material: The online appendix is available at https://doi.org/10.1287/mnsc.2023.01798 .",
+   "work_evidence": [
+    "work"
+   ],
+   "location_evidence": [
+    "physical proximity"
+   ],
+   "effect_evidence": [
+    "performance"
+   ],
+   "discovered_via": "crossref-journal:Management Science",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": -2.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "physical proximity"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "experimental",
+   "evidence_strength_hits": [
+    "random assignment"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Integrating Hybrid Work in Organizations: A Strategic HRM Perspective to Pursue Vertical and Horizontal Alignment",
+   "authors": "Sara Bonesso, Laura Cortellazzo, Giovanna Afeltra",
+   "source": "Human Resource Management Journal",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-07-01",
+   "link": "https://doi.org/10.1111/1748-8583.70040",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT Technological advancements and, more recently, the COVID‐19 pandemic have accelerated the transition toward hybrid workplaces. Even though the design of appropriate HRM practices is recognized as an important factor in ensuring an effective transition toward hybrid work environments, existing research has offered limited insights into how companies might strategically integrate hybrid work in a coherent HRM system of HRM to attain a competitive advantage. Indeed, extant empirical studies mainly focus on the individual level of analysis, while the discussion on hybrid work practices at the organizational level remains conceptual. This paper aims to advance this debate by relying on the theoretical perspective of strategic human resource management (SHRM). Most extant models in the field of SHRM either focus on the vertical linkages of HRM practices with corporate strategy or on the horizontal alignment of the HRM system, missing the opportunity to adopt a comprehensive approach to SHRM to explain the current transition to hybrid workplaces. In addressing these gaps, the study uses a longitudinal case study of an Italian company over 4 years of implementation of a hybrid work environment and explores HR's interventions through the lenses of the Harvard model and the ability‐motivation‐opportunity (AMO) framework. Specifically, the study examines how vertical and horizontal alignment of strategic hybrid work HR practices are achieved and influence employee, organizational, and societal outcomes, providing valuable insights for companies approaching this new way of working and for HR managers and professionals.",
+   "work_evidence": [
+    "work",
+    "employee",
+    "managers",
+    "management",
+    "human resource"
+   ],
+   "location_evidence": [
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "effective"
+   ],
+   "discovered_via": "crossref-journal:Human Resource Management Journal",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 5.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Indeed, extant empirical studies mainly focus on the individual level of analysis, while the discussion on hybrid work practices at the organizational level remains conceptual.",
+    "In addressing these gaps, the study uses a longitudinal case study of an Italian company over 4 years of implementation of a hybrid work environment and explores HR's interventions through the lenses of the Harvard model and the ability‐motivation‐opportunity (AMO) framework.",
+    "Specifically, the study examines how vertical and horizontal alignment of strategic hybrid work HR practices are achieved and influence employee, organizational, and societal outcomes, providing valuable insights for companies approaching this new way of working and for HR managers and professionals."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "longitudinal",
+    "case study"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "The freedom and insecurity paradox: Exploring the complex landscape of remote work experiences among early-career professionals",
+   "authors": "Aykut Berber, Fatih Avcilar, Didem Taser-Erdogan, A. Gökhan Acar",
+   "source": "Human Relations",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-06-30",
+   "link": "https://doi.org/10.1177/00187267261459217",
+   "type": "peer-reviewed article",
+   "abstract": "The expansion of hybrid and remote work arrangements continues to reshape contemporary work, yet the experiences of early-career professionals within these contexts remain underexplored. Drawing on semi-structured interviews with 16 early-career professionals working across remote and physical settings, this study examines how individuals, at the start of their careers, experience and interpret hybrid work. The findings reveal two analytically distinct yet interconnected premises: experiences of situational detachment associated with feelings of insecurity, alongside the perception of home as a refuge that affords focus and autonomy. Our analysis identifies challenges faced by early-career professionals when working remotely, particularly in sustaining relationships with their immediate managers and colleagues, interpreting expectations and accessing informal learning and developmental opportunities. Together, these findings illuminate how hybrid work simultaneously enables and constrains early-career professionals’ learning, identity formation and sense of belonging. By foregrounding the lived experiences of individuals entering professional roles, the study extends qualitative research on hybrid work and highlights the importance of social interaction, visibility and organisational support in shaping early-career development in hybrid work contexts.",
+   "work_evidence": [
+    "work",
+    "managers"
+   ],
+   "location_evidence": [
+    "remote work",
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "learning"
+   ],
+   "discovered_via": "crossref-journal:Human Relations",
+   "matrix_cell": "more_remote-lower_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": 6.5,
+   "matrix_y_score": -1.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "The freedom and insecurity paradox: Exploring the complex landscape of remote work experiences among early-career professionals The expansion of hybrid and remote work arrangements continues to reshape contemporary work, yet the experiences of early-career professionals within these contexts remain underexplored.",
+    "Our analysis identifies challenges faced by early-career professionals when working remotely, particularly in sustaining relationships with their immediate managers and colleagues, interpreting expectations and accessing informal learning and developmental opportunities.",
+    "Together, these findings illuminate how hybrid work simultaneously enables and constrains early-career professionals’ learning, identity formation and sense of belonging."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "remote work",
+    "remotely",
+    "trend: expansion of"
+   ],
+   "matrix_y_evidence": [
+    "constrains + learning",
+    "enables + learning",
+    "paradox"
+   ],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "interviews"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Home (not so) sweet home: Remote work and medical leaves in Brazil",
+   "authors": "André Mancha, Elisa Peres",
+   "source": "Labour Economics",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-06-01",
+   "link": "https://doi.org/10.1016/j.labeco.2026.102883",
+   "type": "peer-reviewed article",
+   "abstract": "The COVID-19 pandemic caused an unprecedented shift to remote work worldwide. In this paper, we investigate the dual impact of this transition on physical injuries and mental health issues by analyzing more than 1.5 million medical leaves in Brazil from 2018 to 2021. Using a differences-in-differences model, we compared workers from firms who transitioned to remote work (non-essential services) and those who stayed commuting to their workplace (essential services) before and after the pandemic. Our findings reveal a significant decrease in labor accidents, primarily driven by fewer bodily injuries, but a substantial increase in medical leave related to mental health issues. The abrupt transition to remote work, combined with increased domestic responsibilities in a setting of social distancing norms, likely contributed to elevated stress levels and work-life conflicts. Our findings highlight the contrasting health impacts of remote work adoption in the context of an abrupt transition, with persistent mental health consequences that extend well beyond the initial pandemic shock.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "workplace",
+    "labor",
+    "firms"
+   ],
+   "location_evidence": [
+    "remote work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Labour Economics",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 7.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "The abrupt transition to remote work, combined with increased domestic responsibilities in a setting of social distancing norms, likely contributed to elevated stress levels and work-life conflicts."
+   ],
+   "matrix_x_evidence": [
+    "remote work",
+    "trend: increase in",
+    "trend: shift to"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "When Home is the Workplace: Foregrounding Ethical Responses to Domestic Violence When Working-from-home",
+   "authors": "Mihajla Gavin, Ruth Weatherall",
+   "source": "Work, Employment and Society",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-05-11",
+   "link": "https://doi.org/10.1177/09500170261434879",
+   "type": "peer-reviewed article",
+   "abstract": "Domestic violence (DV) is a global problem affecting individuals, communities and societies, and increasingly a workplace problem. During the COVID-19 pandemic, home became both the workplace under government-directed lockdowns and a site for increased DV in a ‘shadow pandemic’ of violence. This article examines how workplaces supported DV victim–survivors when working-from-home during lockdowns. Drawing primary data from interviews with DV first-responders in Aotearoa New Zealand workplaces, a country with epidemic levels of DV, we theorise how workplaces conceptualised their responsibility for DV across ‘blurred’ spaces of home and work and enacted duty of care obligations when working-from-home. We argue that given DV is a complex work health and safety risk, mere legal compliance for protecting victims when working-from-home falls short of employers’ ethical responsibilities for ensuring safe workplaces and preventing violence.",
+   "work_evidence": [
+    "work",
+    "workplace",
+    "employers"
+   ],
+   "location_evidence": [
+    "working from home"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Work, Employment and Society",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 4.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "working from home"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "interviews"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Remote and On‐Site Working During the Covid‐19 Pandemic: (Re)Configuring Work Organisation in Border Control Services and the Nuclear Industry",
+   "authors": "Laure Bonnaud, Tania Navarro Rodríguez",
+   "source": "New Technology, Work and Employment",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-05-04",
+   "link": "https://doi.org/10.1111/ntwe.70031",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT During the COVID‐19 pandemic, the nuclear and border control services had to reorganise their work, both on‐site and remotely, to continue their activities. Whereas employees came to work at the power plants and border posts every day, the health rules introduced by the public authorities and those relating to the lockdown of populations suddenly meant that only a portion of the teams could be selected to continue activities essential to electricity production and food supply within the European Union. Above and beyond the perceived inequity between on‐site workers and those able to work remotely, this research examines how the organisation regulates work arrangements, and in particular, how work activities are configured—that is, how they are carried out, and the autonomy and control involved in their execution. To this end, it draws on Jean‐Daniel Reynaud's regulation theory to analyse the regulation of work organisations in these two sectors. It shows that the distinction between on‐site and remote work was not set in stone, and that there was considerable movement (of workers, documents, procedures, etc.) between the two. It also highlights the changing dynamics of the reconfiguration of on‐site and remote work, even over short periods of time, as a result of autonomous and control‐based regulations designed to achieve these reorganisations. Our case studies concern the maintenance departments at two nuclear production sites plants in Spain, and the veterinary and phytosanitary inspection border services in three French ports. This comparison opens up analytical perspectives for many other sectors.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "employees",
+    "teams",
+    "organisation"
+   ],
+   "location_evidence": [
+    "remote work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:New Technology, Work and Employment",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": -4.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Above and beyond the perceived inequity between on‐site workers and those able to work remotely, this research examines how the organisation regulates work arrangements, and in particular, how work activities are configured—that is, how they are carried out, and the autonomy and control involved in their execution."
+   ],
+   "matrix_x_evidence": [
+    "on site",
+    "remote work",
+    "remotely"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Profiles of boundary tactics when working from home and their relationship with recovery",
+   "authors": "Mona Pohlner, Sebastian Seibel, Verena C. Haun",
+   "source": "European Journal of Work and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-04-28",
+   "link": "https://doi.org/10.1080/1359432x.2026.2664220",
+   "type": "peer-reviewed article",
+   "abstract": "Employees in hybrid work arrangements face blurred work-home boundaries when working from home, which can hinder recovery from work-related stress. To manage this challenge, employees use boundary tactics (temporal, physical, communicative, technological). Previous quantitative studies have primarily examined these tactics in isolation. Using a person-centred approach, we examined combinations of boundary tactics and explored their associations with antecedents (colleagues’ and supervisors’ segmentation norms, segmentation preference) and recovery indicators as outcomes (psychological detachment, mastery, control, relaxation, exhaustion). We conducted a two-wave study with measurement points four weeks apart. Latent profile analysis revealed four quantitatively and qualitatively distinct boundary tactic profiles at Time 1 (nT1 = 413). Two profiles (Uniform Moderate and Uniform Strong Boundary Managers) used all boundary tactics to the same extent, whereas two other profiles (Selective Moderate and Selective Strong Boundary Managers) showed reduced use of communicative and technological tactics. Segmentation preference and segmentation norms differentially predicted profile membership. Furthermore, we found distinct associations between boundary tactic profiles and recovery indicators at Time 2 (nT2 = 270). In summary, Uniform Strong Boundary Managers demonstrated the most favourable recovery experiences.",
+   "work_evidence": [
+    "work",
+    "employees",
+    "managers"
+   ],
+   "location_evidence": [
+    "working from home",
+    "hybrid work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:European Journal of Work and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 2.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Profiles of boundary tactics when working from home and their relationship with recovery Employees in hybrid work arrangements face blurred work-home boundaries when working from home, which can hinder recovery from work-related stress."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "working from home"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "The Gendered Flexibility Paradox and Remote-First Work: How Working Parents Reconcile Work and Care",
+   "authors": "Lauren Ryan, Brendan Churchill, Leah Ruppanner",
+   "source": "Work, Employment and Society",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-04-01",
+   "link": "https://doi.org/10.1177/09500170251373035",
+   "type": "peer-reviewed article",
+   "abstract": "Recent technological advances and globalised distribution of work have accelerated the rise of remote-first organisations where everyone works remotely, yet the effects of this approach on working parents remain underexplored. Drawing on qualitative interviews with 25 mothers and 16 fathers from 31 remote-first organisations, this study examines the gendered impact of standardised remote-first flexibility on work–family reconciliation. Findings show that remote-first work enhances location and schedule freedom, allowing parents to sustain a dual devotion to work and family. Fathers used this flexibility to increase engagement with domestic tasks and caregiving, while mothers focused on meeting work demands (in addition to caregiving responsibilities). The use of remote-first working arrangements increased employee trust and empathy among working parents, reducing flexibility stigma concerns. While fathers resisted tendencies to overwork, the remote-first model perpetuated the gendered flexibility paradox for mothers, leading to increased labour expansion and self-exploitation in both paid and unpaid work.",
+   "work_evidence": [
+    "work",
+    "employee",
+    "labour"
+   ],
+   "location_evidence": [
+    "remote first"
+   ],
+   "effect_evidence": [
+    "engagement"
+   ],
+   "discovered_via": "crossref-journal:Work, Employment and Society",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 6.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "remote first",
+    "remotely"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "interviews"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "The hidden costs of hybrid working: how daily work locations shape extra-role behaviours",
+   "authors": "Jian Shi, Sanne Feenstra, Mark van Vugt",
+   "source": "European Journal of Work and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-03-24",
+   "link": "https://doi.org/10.1080/1359432x.2026.2648292",
+   "type": "peer-reviewed article",
+   "abstract": "Hybrid working has become the “new normal”, yet its consequences for employees’ day-to-day work behaviours remain insufficiently understood. Drawing on social psychological theories, and the emerging literature on hybrid working, we examined how working remotely (versus on-site) affects employees’ engagement in both in-role behaviours (such as task performance and withdrawal behaviour) and extra-role behaviours (such as helping and creative behaviour). We conducted a daily diary study among 112 hybrid workers in the U.K., capturing within-person variations in work locations and work behaviours across multiple days. As expected, our findings revealed that employees engaged less in extra-role behaviours on days working remotely (versus on-site), while in-role behaviours remained stable across work locations. We further showed that these reductions in helping behaviours were explained by employees feeling less engaged and less identified with their team on remote-working days, and that decreases in creative behaviour were accounted for by lower team identification alone. Contrary to our predictions, we found no evidence that identity leadership mitigated these effects. Our findings highlight the hidden costs of hybrid working for employees’ extra-role contributions, even when core job performance is unaffected. We discuss implications for the design of hybrid working to sustain positive work behaviours.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "employees",
+    "job",
+    "team"
+   ],
+   "location_evidence": [
+    "remote working",
+    "hybrid working"
+   ],
+   "effect_evidence": [
+    "performance",
+    "engagement"
+   ],
+   "discovered_via": "crossref-journal:European Journal of Work and Organizational Psychology",
+   "matrix_cell": "more_remote-lower_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": 3.0,
+   "matrix_y_score": -2.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Drawing on social psychological theories, and the emerging literature on hybrid working, we examined how working remotely (versus on-site) affects employees’ engagement in both in-role behaviours (such as task performance and withdrawal behaviour) and extra-role behaviours (such as helping and creative behaviour).",
+    "Our findings highlight the hidden costs of hybrid working for employees’ extra-role contributions, even when core job performance is unaffected."
+   ],
+   "matrix_x_evidence": [
+    "hybrid working",
+    "on site",
+    "remote working",
+    "remotely"
+   ],
+   "matrix_y_evidence": [
+    "costs of",
+    "hidden costs"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Does Telework Signal Inclusion, and for Whom? A Multilevel Examination of Employee Gender and Organizational Gender Composition as Contingencies",
+   "authors": "Yingjie Qian, Yanran Fang, Yiduo Shao, Junqi Shi",
+   "source": "Journal of Organizational Behavior",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-03-19",
+   "link": "https://doi.org/10.1002/job.70079",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT Telework is a flexible work arrangement that allows employees to work from any location. Although telework is often viewed as a signal of organizations' inclusion efforts, it remains unclear whether telework fosters perceptions of inclusion, and for whom. Drawing on signaling theory, we adopt a multilevel perspective to examine the conditions under which telework is associated with perceptions of inclusion at both the organizational and employee levels. Our analysis of three‐wave, multisource (i.e., employees, HR managers, and top managers) data collected from 244 organizations and 1454 employees shows that telework availability was positively related to organizational inclusive climate, and subsequently to organizational performance and innovation, but only in organizations with higher gender diversity. This relationship does not vary by the proportion of women employees. At the employee level, telework participation is negatively associated with perceptions of inclusion among men, but not among women. These findings offer insights into understanding whether and when telework functions as an inclusion signal across levels and underscore the critical role of gender‐related contingencies. We discuss theoretical and practical implications of our findings.",
+   "work_evidence": [
+    "work",
+    "employee",
+    "employees",
+    "managers"
+   ],
+   "location_evidence": [
+    "telework",
+    "flexible work arrangement"
+   ],
+   "effect_evidence": [
+    "performance",
+    "innovation"
+   ],
+   "discovered_via": "crossref-journal:Journal of Organizational Behavior",
+   "matrix_cell": "more_remote-higher_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "higher_effectiveness",
+   "matrix_x_score": 8.0,
+   "matrix_y_score": 1.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Does Telework Signal Inclusion, and for Whom?",
+    "Although telework is often viewed as a signal of organizations' inclusion efforts, it remains unclear whether telework fosters perceptions of inclusion, and for whom.",
+    "Drawing on signaling theory, we adopt a multilevel perspective to examine the conditions under which telework is associated with perceptions of inclusion at both the organizational and employee levels."
+   ],
+   "matrix_x_evidence": [
+    "flexible work arrangement",
+    "telework"
+   ],
+   "matrix_y_evidence": [
+    "higher + innovation",
+    "negatively + inclusion",
+    "negatively associated + inclusion",
+    "positively + inclusive climate",
+    "positively related + inclusive climate"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Working From Home and Performance Pay: Individual or Collective Payment Schemes?",
+   "authors": "Uwe Jirjahn, Cinzia Rienzo",
+   "source": "British Journal of Industrial Relations",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-03-01",
+   "link": "https://doi.org/10.1111/bjir.70012",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT Working from home (WFH) reduces real‐time visibility of employees within the physical space of the workplace. This makes it difficult to monitor employees’ work behaviour. Employers may instead monitor employees’ outputs and provide incentives through performance pay. The crucial question is what type of performance pay employers provide to incentivize employees who work from home. Using British panel data, we find that WFH decreases the likelihood of solely receiving individual performance pay. It increases the likelihood of receiving collective performance pay—with or without individual performance pay. This pattern also holds in instrumental variable estimations accounting for endogeneity. Our findings fit theoretical considerations. WFH means that employees have less opportunities to socialize at work entailing the tendency that they focus on personal achievement and neglect collaboration. Solely rewarding individual performance may reinforce this tendency. By contrast, employers reward collective performance as it counteracts the adverse effects of WFH by providing incentives for collaboration, helping on the job and information sharing.",
+   "work_evidence": [
+    "work",
+    "workplace",
+    "employees",
+    "employers",
+    "job"
+   ],
+   "location_evidence": [
+    "work from home",
+    "working from home",
+    "wfh"
+   ],
+   "effect_evidence": [
+    "performance",
+    "collaboration"
+   ],
+   "discovered_via": "crossref-journal:British Journal of Industrial Relations",
+   "matrix_cell": "more_remote-lower_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": 8.0,
+   "matrix_y_score": -2.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Working From Home and Performance Pay: Individual or Collective Payment Schemes?",
+    "The crucial question is what type of performance pay employers provide to incentivize employees who work from home.",
+    "Using British panel data, we find that WFH decreases the likelihood of solely receiving individual performance pay."
+   ],
+   "matrix_x_evidence": [
+    "wfh",
+    "work from home",
+    "working from home"
+   ],
+   "matrix_y_evidence": [
+    "adverse + performance",
+    "decreases + performance"
+   ],
+   "evidence_strength": "quasi_experimental",
+   "evidence_strength_hits": [
+    "instrumental variable"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "The Role of ICT Demands and Resources and Job Autonomy in the Work‐Life Balance of Hybrid and High‐Intensity Teleworkers",
+   "authors": "Kaire Piirsalu‐Kivihall, Tiiu Paas, Anne Aidla",
+   "source": "New Technology, Work and Employment",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-03-01",
+   "link": "https://doi.org/10.1111/ntwe.70000",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT This study investigates the impact of perceived ICT demands, ICT resources, and job autonomy on work‐life balance (WLB) in hybrid and high‐intensity teleworking. Utilising survey data from the Estonian Salary Information Agency, the study includes 1495 full‐time employees who work remotely using computers for more than half their work time. Regression results indicate distinct relationships between ICT demands/resources and WLB for hybrid and high‐intensity teleworkers, with one exception: exhausting e‐communication is negatively associated with WLB in both teleworker groups. Moderation analysis reveals that some ICT resources can slightly ease the negative impact of e‐communication on WLB for hybrid but not high‐intensity teleworkers. High job autonomy is an important job resource for both groups, but it may exacerbate the negative impact of exhausting e‐communication on WLB. These findings contribute to ongoing discussions surrounding teleworkers' WLB by considering different telework intensities, job autonomy, and the role of ICT usage.",
+   "work_evidence": [
+    "work",
+    "employees",
+    "job"
+   ],
+   "location_evidence": [
+    "telework",
+    "teleworking"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:New Technology, Work and Employment",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 3.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "The Role of ICT Demands and Resources and Job Autonomy in the Work‐Life Balance of Hybrid and High‐Intensity Teleworkers ABSTRACT This study investigates the impact of perceived ICT demands, ICT resources, and job autonomy on work‐life balance (WLB) in hybrid and high‐intensity teleworking.",
+    "These findings contribute to ongoing discussions surrounding teleworkers' WLB by considering different telework intensities, job autonomy, and the role of ICT usage."
+   ],
+   "matrix_x_evidence": [
+    "remotely",
+    "telework",
+    "teleworking"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "survey"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Longitudinal trajectories of leader–member exchange in the era of hybrid work: A growth mixture analysis",
+   "authors": "Marie‐Colombe Afota, Véronique Robert, Simon A. Houle",
+   "source": "Journal of Occupational and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-03-01",
+   "link": "https://doi.org/10.1111/joop.70083",
+   "type": "peer-reviewed article",
+   "abstract": "Abstract While leader–member exchange (LMX) research has traditionally viewed the quality of relationships between leaders and followers – known for their beneficial implications – as stable over time, this perspective is increasingly challenged. Understanding how LMX relationships evolve is especially important in an era where hybrid work disrupts the foundations of high‐quality LMX relationships. Accordingly, this study aims to (1) examine changes in LMX relationships over 6 months to identify profiles of trajectories; and (2) assess the impact of the current hybrid work context on these LMX trajectories by focusing on telework intensity and monitoring practices (observational or interactional). Using three‐wave longitudinal data from 769 workers across industries, we identified five distinct profiles. Among these, four displayed significant changes over time, supporting a dynamic view of LMX. Interestingly, greater fluctuations in LMX quality were associated with decreasing LMX trajectories, while higher telework intensity tended to reduce these fluctuations. Results demonstrated that monitoring practices played a critical role: observational monitoring was linked to the least desirable profiles, while interactional monitoring reduced the likelihood of belonging to those profiles. Moreover, monitoring practices impacted LMX trajectories, regardless of profile membership. The implications for LMX theory and managerial practices in a hybrid work context are discussed.",
+   "work_evidence": [
+    "work",
+    "workers"
+   ],
+   "location_evidence": [
+    "telework",
+    "hybrid work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Journal of Occupational and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 6.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "telework"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "longitudinal"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Did the COVID-19 Pandemic Make It Worse? Working from Home and Affective Well-Being at the Intersections of Parental Status and Occupation",
+   "authors": "Yue Qian, Wen Fan",
+   "source": "ILR Review",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-03-01",
+   "link": "https://doi.org/10.1177/00197939251390748",
+   "type": "peer-reviewed article",
+   "abstract": "The COVID-19 pandemic led to an unprecedented expansion of working from home. To capture the individual well-being implications of this profound social change, the authors examine how workers’ affective well-being changed from pre-pandemic to the pandemic era and how such change varied at the intersections of work location, parental status, and occupational teleworkability. Data came from the American Time Use Survey (2003–2021), the American Community Survey, the Current Population Survey, and the Oxford COVID-19 Government Response Tracker. Ordinary Least Squares models show that the pandemic exacerbated negative affect the most for remote-working parents in less-teleworkable occupations. This pandemic impact was most pronounced during school closures, suggesting that rising challenges in balancing work–family demands heightened negative affect among remote-working parents with less-teleworkable occupations. Overall, this study reveals the heterogeneous well-being impacts of working from home and highlights the adverse implications of weak care infrastructures and inadequate workplace support for parental well-being.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "workplace",
+    "occupation",
+    "occupational"
+   ],
+   "location_evidence": [
+    "remote working",
+    "working from home"
+   ],
+   "effect_evidence": [
+    "well being",
+    "time use"
+   ],
+   "discovered_via": "crossref-journal:ILR Review",
+   "matrix_cell": "more_remote-lower_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": 5.5,
+   "matrix_y_score": -1.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Working from Home and Affective Well-Being at the Intersections of Parental Status and Occupation The COVID-19 pandemic led to an unprecedented expansion of working from home.",
+    "Overall, this study reveals the heterogeneous well-being impacts of working from home and highlights the adverse implications of weak care infrastructures and inadequate workplace support for parental well-being."
+   ],
+   "matrix_x_evidence": [
+    "remote working",
+    "trend: expansion of",
+    "working from home"
+   ],
+   "matrix_y_evidence": [
+    "adverse + well being"
+   ],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "survey"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Employees’ perceptions of working-from-home and their relationship to work engagement: a person-centred approach over time",
+   "authors": "Katrien Vangrieken, Ilke Grosemans, Robbe Verresen",
+   "source": "European Journal of Work and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-02-07",
+   "link": "https://doi.org/10.1080/1359432x.2026.2622930",
+   "type": "peer-reviewed article",
+   "abstract": "This study investigates how employees’ perceptions of working-from-home (WFH) relate to work engagement, using a longitudinal person-centred approach grounded in Job Demands-Resources (JD-R) theory. Building on a value-based redefinition of resources and demands, we argue that WFH elicits a constellation of work and non-work characteristics whose impact depends on how employees personally value them. Drawing on survey data from two independent samples collected during and after the COVID-19 pandemic (N1 = 338; N2 = 923), we identified five distinct profiles of WFH valuation, reflecting different configurations of perceived resources and demands: a dominantly demanding, a moderately demanding, an ambiguous, a moderately resourceful, and a dominantly resourceful profile. Latent Transition Analyses revealed that while profile membership appeared largely stable over time, societal context was associated with profile distribution, with more demanding valuations prevalent during the pandemic. Work engagement varied significantly across profiles, with higher engagement reported in more resourceful profiles. Contrary to expectations, changes in WFH frequency did not consistently predict profile transitions, though frequency negatively impacted engagement in the most demanding profile. These findings highlight the importance of considering individual differences in valuation of WFH, the need for context sensitivity, and temporal dynamics when assessing WFH’s impact.",
+   "work_evidence": [
+    "work",
+    "employees",
+    "job"
+   ],
+   "location_evidence": [
+    "working from home",
+    "wfh"
+   ],
+   "effect_evidence": [
+    "engagement"
+   ],
+   "discovered_via": "crossref-journal:European Journal of Work and Organizational Psychology",
+   "matrix_cell": "more_remote-lower_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": 6.0,
+   "matrix_y_score": -1.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Employees’ perceptions of working-from-home and their relationship to work engagement: a person-centred approach over time This study investigates how employees’ perceptions of working-from-home (WFH) relate to work engagement, using a longitudinal person-centred approach grounded in Job Demands-Resources (JD-R) theory.",
+    "Contrary to expectations, changes in WFH frequency did not consistently predict profile transitions, though frequency negatively impacted engagement in the most demanding profile."
+   ],
+   "matrix_x_evidence": [
+    "wfh",
+    "working from home"
+   ],
+   "matrix_y_evidence": [
+    "negatively + engagement"
+   ],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "survey",
+    "longitudinal"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Not Even Remotely Close: How Co‐Location Imbalance Affects Subgroup Formation in Hybrid Teams",
+   "authors": "Lisa Handke, Patrícia L. Costa, Maria X. Hincapie, Michael D. Johnson",
+   "source": "Journal of Organizational Behavior",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-02-01",
+   "link": "https://doi.org/10.1002/job.2875",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT Despite the substantial proliferation of hybrid work, little has been done to reconcile extant individual‐ and team‐level perspectives. This is problematic because it does not acknowledge how individuals' hybrid work practices constrain team‐level interactions and subsequent outcomes. Specifically, the extant literature does not yet capture the complex configurations that result from team members alternating between co‐located and remote forms of collaboration and how these may provoke the formation of subgroups within the team. In this conceptual paper, we introduce the construct co‐location imbalance , which we define as the disparity in co‐location between different combinations of team members, as a way of capturing geographic configurations in hybrid teams. Through illustrative hybrid teamwork archetypes, we demonstrate the meaning and implications of co‐location imbalance on subgroup formation. We then map out a nomological network surrounding co‐location imbalance and derive testable propositions on its temporal dynamics and antecedents. Our paper concludes with a discussion of our research's theoretical and practical contributions and directions to advance future research on hybrid teamwork.",
+   "work_evidence": [
+    "work",
+    "team",
+    "teams"
+   ],
+   "location_evidence": [
+    "hybrid work",
+    "co located",
+    "co location"
+   ],
+   "effect_evidence": [
+    "collaboration"
+   ],
+   "discovered_via": "crossref-journal:Journal of Organizational Behavior",
+   "matrix_cell": "less_remote-lower_effectiveness",
+   "matrix_x": "less_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": -5.5,
+   "matrix_y_score": -1.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "This is problematic because it does not acknowledge how individuals' hybrid work practices constrain team‐level interactions and subsequent outcomes.",
+    "Specifically, the extant literature does not yet capture the complex configurations that result from team members alternating between co‐located and remote forms of collaboration and how these may provoke the formation of subgroups within the team."
+   ],
+   "matrix_x_evidence": [
+    "co located",
+    "co location",
+    "hybrid work",
+    "remotely",
+    "trend: proliferation"
+   ],
+   "matrix_y_evidence": [
+    "constrain + outcomes"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "A Meta‐Analysis of Antecedents and Outcomes of Flexible Working Arrangements",
+   "authors": "Niamh Harrop, Lixin Jiang, Nickola Overall",
+   "source": "Journal of Organizational Behavior",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-02-01",
+   "link": "https://doi.org/10.1002/job.2896",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT Flexible working arrangements (FWAs) are increasingly available and used across diverse settings, particularly following the COVID‐19 pandemic. Yet, knowledge of the antecedents and outcomes of FWAs is incomplete and inconclusive. It remains unclear what factors facilitate the perceived availability and use of FWAs, and under what conditions FWAs are most beneficial, including (1) whether flexibility in work schedule (flextime), work location (flexplace) or both (flextime + place) is most beneficial, and (2) whether employees must use FWAs to reap their benefits. To address these gaps, we conduct a comprehensive meta‐analysis to examine theoretically derived antecedents and outcomes of FWAs. We also examine whether different types of FWAs—flextime versus flexplace versus flextime + place, and FWA availability versus FWA use—moderate the relationships between FWAs and outcomes. Meta‐analytic results based on 113 studies with 88 618 participants identify a host of important antecedences of FWAs, such as managerial status, self‐efficacy, and task interdependency. Consistent with social exchange theory, Conservation of Resources theory and boundary theory, FWAs were significantly associated with beneficial outcomes, such as greater job satisfaction, organisational commitment, job autonomy, life satisfaction, better work‐family interface and family satisfaction. Significant moderation indicate that more beneficial employee outcomes were associated with (1) having both flextime and flexplace compared to flextime or flexplace alone, (2) flextime compared to flexplace and (3) the availability compared to use of FWAs. These results provide a comprehensive, systematic understanding of the personal, work‐related, and familial antecedents and outcomes associated with different types of FWAs.",
+   "work_evidence": [
+    "work",
+    "employee",
+    "employees",
+    "job"
+   ],
+   "location_evidence": [
+    "flexible working"
+   ],
+   "effect_evidence": [
+    "job satisfaction"
+   ],
+   "discovered_via": "crossref-journal:Journal of Organizational Behavior",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 1.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "A Meta‐Analysis of Antecedents and Outcomes of Flexible Working Arrangements ABSTRACT Flexible working arrangements (FWAs) are increasingly available and used across diverse settings, particularly following the COVID‐19 pandemic."
+   ],
+   "matrix_x_evidence": [
+    "flexible working"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Organizational telework access dispersion and firm performance",
+   "authors": "Leon Barton, Marvin Neu, Amanda Shantz, Heike Bruch",
+   "source": "Human Relations",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-01-31",
+   "link": "https://doi.org/10.1177/00187267251409940",
+   "type": "peer-reviewed article",
+   "abstract": "This study investigates how disparities in access to telework arrangements within organizations influence collective outcomes. By incorporating social identity with justice theories, we develop a conceptual model and hypothesize that greater dispersion in organizational telework access correlates with diminished organizational performance, primarily due to its association with lower collective positive affective tone. However, we argue that collective organizational identification can mitigate this negative impact. Our empirical analysis, leveraging a multisource dataset of 26,783 employees across 186 companies, substantiates this model. These findings advocate for the importance of intra-organizational variation of telework access in enriching our understanding of both the advantages and disadvantages associated with this prevalent work modality.",
+   "work_evidence": [
+    "work",
+    "employees",
+    "firm"
+   ],
+   "location_evidence": [
+    "telework"
+   ],
+   "effect_evidence": [
+    "performance"
+   ],
+   "discovered_via": "crossref-journal:Human Relations",
+   "matrix_cell": "more_remote-lower_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": 3.0,
+   "matrix_y_score": -1.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Organizational telework access dispersion and firm performance This study investigates how disparities in access to telework arrangements within organizations influence collective outcomes.",
+    "By incorporating social identity with justice theories, we develop a conceptual model and hypothesize that greater dispersion in organizational telework access correlates with diminished organizational performance, primarily due to its association with lower collective positive affective tone."
+   ],
+   "matrix_x_evidence": [
+    "telework"
+   ],
+   "matrix_y_evidence": [
+    "diminished + performance",
+    "lower + performance",
+    "positive + performance"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Hybrid work and daily energy dynamics: breaks, inclusion, and evening recovery",
+   "authors": "Stacey L. Parker, Niamh Dawson, Charlotte Keenan, Sabine Sonnentag, Andrew Neal, Nerina L. Jimmieson",
+   "source": "European Journal of Work and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-01-31",
+   "link": "https://doi.org/10.1080/1359432x.2026.2622933",
+   "type": "peer-reviewed article",
+   "abstract": "Employees and employers alike are striving to realize the potential of hybrid work. Based on energy, recovery, and remote work intensity theories, we expected that daily fluctuations in work locations (i.e. remote versus onsite) provide employees different opportunities for energy-related mechanisms (i.e. taking breaks as needed versus feeling included), which would have consequences for daily energy levels and evening recovery experiences. Using a daily diary study with morning, workday, and evening surveys (n = 3,138 days; N = 271 employees), multilevel path analysis revealed that, on days spent onsite at their workplace, employees feel more included, energized, and have better recovery experiences (i.e., detachment and relaxation) that evening. Conversely, on days spent remotely, employees can take more breaks as needed, ending the day more energized and then better able to detach and relax that evening. These findings reveal new theoretical insights into the dynamics of how work location affects hybrid worker daily energy levels and evening recovery. Practical implications point to the importance of considering these energy-related trade-offs of daily variation in work locations. For example, by considering the consequences of where work is executed and the need to balance opportunities for autonomy and connection across onsite and remote locations.",
+   "work_evidence": [
+    "work",
+    "worker",
+    "workplace",
+    "employees",
+    "employers"
+   ],
+   "location_evidence": [
+    "remote work",
+    "hybrid work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:European Journal of Work and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": -3.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Hybrid work and daily energy dynamics: breaks, inclusion, and evening recovery Employees and employers alike are striving to realize the potential of hybrid work.",
+    "For example, by considering the consequences of where work is executed and the need to balance opportunities for autonomy and connection across onsite and remote locations."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "onsite",
+    "remote work",
+    "remotely"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Spatial Control, Precarity, and Union Resistance in Digital Remote Work: An Analysis of ‘Work From Home’ in US and Canadian Call Centres",
+   "authors": "Virginia Doellgast, Sean O’Brady, Jeonghun Kim",
+   "source": "Work, Employment and Society",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-01-08",
+   "link": "https://doi.org/10.1177/09500170251401491",
+   "type": "peer-reviewed article",
+   "abstract": "This article analyses the experiences of US and Canadian call centre workers and their unions with the shift from physical call centres to ‘work from home’ (WFH) arrangements. Drawing on interviews, focus groups and a worker survey, the authors find that the shift enabled new forms of spatial control grounded in worker preferences for remote work and associated with different forms of precarity. Management control over the physical location of work could increase job insecurity; control over the costs and risk associated with WFH arrangements could increase income insecurity; and control over communication between workers and with their unions could increase collective representation and voice insecurity. Local unions engaged in modes of resistance to spatial control, but with uneven success. Findings suggest that labour power requires union strategies that both defend WFH rights and develop protections targeted at forms of precarity associated with being able to work from home.",
+   "work_evidence": [
+    "work",
+    "worker",
+    "workers",
+    "job",
+    "labour",
+    "management"
+   ],
+   "location_evidence": [
+    "remote work",
+    "work from home",
+    "wfh",
+    "location of work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Work, Employment and Society",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 9.0,
+   "matrix_y_score": 0.5,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Drawing on interviews, focus groups and a worker survey, the authors find that the shift enabled new forms of spatial control grounded in worker preferences for remote work and associated with different forms of precarity.",
+    "Management control over the physical location of work could increase job insecurity; control over the costs and risk associated with WFH arrangements could increase income insecurity; and control over communication between workers and with their unions could increase collective representation and voice insecurity."
+   ],
+   "matrix_x_evidence": [
+    "remote work",
+    "wfh",
+    "work from home"
+   ],
+   "matrix_y_evidence": [
+    "enabled + focus",
+    "increase + insecurity"
+   ],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "survey",
+    "interviews"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Mismatch in Preferences for Working from Home: Evidence from Discrete Choice Experiments with Workers and Employers",
+   "authors": "Piotr Lewandowski, Katarzyna Lipowska, Mateusz Smoter",
+   "source": "ILR Review",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2026-01-01",
+   "link": "https://doi.org/10.1177/00197939251355928",
+   "type": "peer-reviewed article",
+   "abstract": "The authors study workers’ and employers’ preferences for remote work, distinguishing between hybrid and fully remote arrangements. Using discrete choice experiments with more than 10,000 workers and 1,500 employers in Poland, they find a shared preference for hybrid over fully remote work. However, workers’ estimated benefits from remote work fall significantly short of employers’ estimated costs, with average gaps equivalent to 5.2% of earnings for hybrid work and 24.6% for fully remote work. Only 25–35% of employers—those with positive views on remote work productivity and high-quality talent management—value remote work costs in line with workers’ valuations of benefits, particularly in non-routine cognitive occupations.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "employers",
+    "management"
+   ],
+   "location_evidence": [
+    "remote work",
+    "working from home",
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "productivity"
+   ],
+   "discovered_via": "crossref-journal:ILR Review",
+   "matrix_cell": "more_remote-higher_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "higher_effectiveness",
+   "matrix_x_score": 6.0,
+   "matrix_y_score": 1.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Only 25–35% of employers—those with positive views on remote work productivity and high-quality talent management—value remote work costs in line with workers’ valuations of benefits, particularly in non-routine cognitive occupations."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "remote work",
+    "working from home"
+   ],
+   "matrix_y_evidence": [
+    "positive + productivity"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Workplace fear of missing out in the context of working remotely versus in the office – A multimethod perspective from three studies",
+   "authors": "Linda‐Elisabeth Reimann, Carmen Binnewies, Lilly Kruse, Karolin Küskes, Helena Thorbrügge, Phillip Ozimek, Sophie Loose",
+   "source": "Journal of Occupational and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-12-01",
+   "link": "https://doi.org/10.1111/joop.70058",
+   "type": "peer-reviewed article",
+   "abstract": "Abstract In recent years, remote work has gained significant traction. While this shift enhances employee flexibility and work‐life balance, it also introduces challenges, particularly regarding social connectedness and information exchange. Due to these challenges, it may be harder when working remotely to fulfil central work‐related needs, as described by self‐determination theory (SDT), resulting in workplace fear of missing out (wFoMO) – the anxiety of not being up‐to‐date stemming from physical disconnection from the office. This article addresses the underexplored relationship between remote work and wFoMO. We present three studies employing a multimethodological approach: Study 1 offers cross‐sectional insights into the relationship between remote work and wFoMO; Study 2 and Study 3 are experimental, and their results indicate that wFoMO is heightened when individuals' needs, specifically those associated with relatedness, competence, and autonomy, are unmet in a remote work environment. Additionally, Study 3 reveals that when the need for autonomy is unmet, this leads to lower employee well‐being via wFoMO. Collectively, these studies illuminate the complexities of remote work, specifically conditions under which remote work may be challenging for employees. Furthermore, these studies emphasize implications of remote work for wFoMO, and consequently, employee well‐being.",
+   "work_evidence": [
+    "work",
+    "workplace",
+    "employee",
+    "employees"
+   ],
+   "location_evidence": [
+    "remote work"
+   ],
+   "effect_evidence": [
+    "well being"
+   ],
+   "discovered_via": "crossref-journal:Journal of Occupational and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 5.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "We present three studies employing a multimethodological approach: Study 1 offers cross‐sectional insights into the relationship between remote work and wFoMO; Study 2 and Study 3 are experimental, and their results indicate that wFoMO is heightened when individuals' needs, specifically those associated with relatedness, competence, and autonomy, are unmet in a remote work environment.",
+    "Furthermore, these studies emphasize implications of remote work for wFoMO, and consequently, employee well‐being."
+   ],
+   "matrix_x_evidence": [
+    "in the office",
+    "remote work",
+    "remotely"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "cross sectional"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Worker Voice and Mutual Gains From Remote Performance Management: Evidence From Digitalized Services in North America and Germany",
+   "authors": "Sean O'Brady, Virginia Doellgast, Jelena Starcevic",
+   "source": "Human Resource Management Journal",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-11-01",
+   "link": "https://doi.org/10.1111/1748-8583.12601",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT The expansion of remote working arrangements has required managers to adjust their approach to managing performance, as they transition from in‐person to technology‐mediated tools and practices. Past research has identified negative worker impacts associated with intensified digital monitoring and discipline‐based coaching. However, few studies have investigated the antecedents of more worker‐friendly arrangements. This paper examines the role of collective worker voice in shaping remote work performance management choices, based on a comparative study of telecommunications call centers in Canada, the United States, and Germany. Findings suggest that strong collective voice, especially when backed by institutional power, fosters a balanced approach to remote performance management by constraining the intensity of electronic performance monitoring and use of disciplinary practices, as well as by supporting more developmental coaching.",
+   "work_evidence": [
+    "work",
+    "worker",
+    "managers",
+    "management"
+   ],
+   "location_evidence": [
+    "remote work",
+    "remote working"
+   ],
+   "effect_evidence": [
+    "performance"
+   ],
+   "discovered_via": "crossref-journal:Human Resource Management Journal",
+   "matrix_cell": "more_remote-higher_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "higher_effectiveness",
+   "matrix_x_score": 1.5,
+   "matrix_y_score": 2.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Worker Voice and Mutual Gains From Remote Performance Management: Evidence From Digitalized Services in North America and Germany ABSTRACT The expansion of remote working arrangements has required managers to adjust their approach to managing performance, as they transition from in‐person to technology‐mediated tools and practices.",
+    "This paper examines the role of collective worker voice in shaping remote work performance management choices, based on a comparative study of telecommunications call centers in Canada, the United States, and Germany."
+   ],
+   "matrix_x_evidence": [
+    "in person",
+    "remote work",
+    "remote working",
+    "trend: expansion of"
+   ],
+   "matrix_y_evidence": [
+    "gains + performance",
+    "gains from"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "The Cost of Managerial Caring: Exploring Identity Work in the Hybrid Work Context",
+   "authors": "Laurent Taskin, Laurianne Terlinden, Stéphanie Coster, Michel Ajzen",
+   "source": "New Technology, Work and Employment",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-11-01",
+   "link": "https://doi.org/10.1111/ntwe.12316",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT The Covid crisis and the resulting enforced teleworking have significantly shaken up the manager's role, leading to increased identity work. This article draws on a longitudinal study of managers conducted over the course of a full year during the Covid crisis, from May 2020 to June 2021, using interviews and self‐administered diaries to reveal a distinct sequence of identity work. This sequence combines a reappropriation of the humane dimension inherent to the manager's role ( expectations and practices of managerial caring) and a distancing from the team and the managerial role through disembodied management ( cost of caring ). We discuss these results by identifying a paradox of managerial caring which, translated in terms of identity, may help understanding the contemporary withdrawal tendencies among managers.",
+   "work_evidence": [
+    "work",
+    "team",
+    "manager",
+    "managers",
+    "management"
+   ],
+   "location_evidence": [
+    "teleworking",
+    "hybrid work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:New Technology, Work and Employment",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 2.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "teleworking"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "longitudinal",
+    "interviews"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Immigrant IT Workers' Experiences With Remote Work: Temporal, Spatial, and Ideological Dimensions of Paid/Unpaid Work and Care",
+   "authors": "Kim de Laat",
+   "source": "New Technology, Work and Employment",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-11-01",
+   "link": "https://doi.org/10.1111/ntwe.12329",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT This article examines immigrant IT workers' experiences with remote work. Through interviews with 21 immigrant IT employees, I find that remote work is used to bridge care/work obligations. Bridging occurs spatially , for example, when working from home enables family members to return to countries of origin for extended periods of time. And bridging occurs ideologically , by enabling remote workers to enact gendered self‐concepts that may be otherwise challenging to achieve. For women, this means they can maintain focus on paid work, while for men, it means engaging in involved fatherhood by taking on more childcare duties. These findings enhance the social shaping of technology perspective by delineating immigrants' gendered relationships with ICT‐mediated remote work, and the intricacies of time use. While ICT‐mediated remote work is conferred on individual employees, it is used to allocate a variety of (unpaid) care relations, both intra‐ and inter‐household. Remote work is not merely an individual‐level experience, and preferences for and against it may be incidental, in the case of immigrants. Rather it is necessary for many to bridge care/work gaps shaped by immigrants' experiences.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "employees"
+   ],
+   "location_evidence": [
+    "remote work",
+    "working from home"
+   ],
+   "effect_evidence": [
+    "time use"
+   ],
+   "discovered_via": "crossref-journal:New Technology, Work and Employment",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 6.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "remote work",
+    "working from home"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "interviews"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Mechanisms Underlying the Effects of Work from Home on Careers in the Post-Covid Context",
+   "authors": "Anna Matysiak, Agnieszka Kasperska, Ewa Cukrowska-Torzewska",
+   "source": "Work, Employment and Society",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-10-01",
+   "link": "https://doi.org/10.1177/09500170251325769",
+   "type": "peer-reviewed article",
+   "abstract": "This study investigates the role of two mechanisms – perceived workers’ performance and commitment – in shaping the career opportunities of teleworkers and office-based workers in the post-pandemic context of the United Kingdom. We outline a theoretical framework that integrates economic and sociological literature on work from home (WFH) and careers, and accounts for workers’ gender and parenthood obligations. We test it utilizing data from a discrete choice experiment conducted between July and December 2022 with 937 managers. Our findings reveal that hybrid workers face poorer career prospects than office-based workers because managers perceive them as underperforming. Among full-time teleworkers, reduced career opportunities stem not only from managers’ perceptions of their job performance but also from assumptions that full-time teleworkers are less committed to work. Finally, we demonstrate disparate impacts on promotion and earning opportunities based on gender and parenthood, primarily due to differing employer perceptions regarding work performance and commitment.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "employer",
+    "job",
+    "managers"
+   ],
+   "location_evidence": [
+    "work from home",
+    "wfh"
+   ],
+   "effect_evidence": [
+    "performance",
+    "promotion"
+   ],
+   "discovered_via": "crossref-journal:Work, Employment and Society",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 1.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Mechanisms Underlying the Effects of Work from Home on Careers in the Post-Covid Context This study investigates the role of two mechanisms – perceived workers’ performance and commitment – in shaping the career opportunities of teleworkers and office-based workers in the post-pandemic context of the United Kingdom."
+   ],
+   "matrix_x_evidence": [
+    "office based",
+    "wfh",
+    "work from home"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Is Workplace Flexibility Penalised? The Gendered Consequences of Working from Home for the Wages of Parents and Childless Employees in the UK",
+   "authors": "Johanna Elisabeth Pauliks",
+   "source": "Work, Employment and Society",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-10-01",
+   "link": "https://doi.org/10.1177/09500170251336943",
+   "type": "peer-reviewed article",
+   "abstract": "Working from home has been discussed in terms of reconciling work and family life and reducing gender gaps in the labour market. However, its implications for wages remain the subject of debate, with some researchers arguing that flexibility stigma disproportionately disadvantages certain groups, particularly mothers. This article uses data from Understanding Society, the UK Household Longitudinal Study, to investigate whether working from home has different consequences for individual wages according to gender and parental status. Inverse probability weighted fixed-effects regression models are used with a sample of up to 8552 employees. The results suggest that working from home is associated with higher earnings for mothers, suggesting that the benefits of flexible working arrangements may outweigh potential disadvantages.",
+   "work_evidence": [
+    "work",
+    "workplace",
+    "employees",
+    "labour"
+   ],
+   "location_evidence": [
+    "working from home",
+    "flexible working"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Work, Employment and Society",
+   "matrix_cell": "more_remote-lower_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": 4.0,
+   "matrix_y_score": 1.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "The results suggest that working from home is associated with higher earnings for mothers, suggesting that the benefits of flexible working arrangements may outweigh potential disadvantages."
+   ],
+   "matrix_x_evidence": [
+    "flexible working",
+    "working from home"
+   ],
+   "matrix_y_evidence": [
+    "benefits of",
+    "higher + results"
+   ],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "longitudinal"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "curator",
+   "curator_note": "Finding is a gendered wage penalty. The classifier read the abstract's framing as positive."
+  },
+  {
+   "title": "The effectiveness of a team intervention to enhance team regulation in hybrid teams: a randomized controlled trial",
+   "authors": "Sarah Elena Althammer, Anne Marit Wöhrmann, Alexandra Michel",
+   "source": "European Journal of Work and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-09-24",
+   "link": "https://doi.org/10.1080/1359432x.2025.2562306",
+   "type": "peer-reviewed article",
+   "abstract": "This article evaluates the effectiveness of a team intervention for hybrid work teams. In the intervention, hybrid work teams engaged in team-regulatory strategies with the aim to improve hybrid team collaboration. In a cluster-randomized controlled trial, data from 478 individuals across 56 hybrid work teams working with flexible work designs (FWD, flexibility in where, when and how to work) were used to examine the intervention effectiveness on FWD-specific social support, psychological safety, and psychosocial management as an indicator of team collaboration. Teams were assigned to an intervention group that received the intervention immediately (n = 229) or to a waitlist control group (n = 249). Participants received questionnaires before and after the intervention and at a 9-week follow-up. The results of multilevel analyses showed that the intervention improved FWD-specific social support and psychological safety with small to medium effect sizes and psychosocial management with a large effect size. Team regulation mediated effects. Medium effects on team regulation and psychosocial management as well as a small effect on psychological safety persisted over 9 weeks.",
+   "work_evidence": [
+    "work",
+    "team",
+    "teams",
+    "management"
+   ],
+   "location_evidence": [
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "effectiveness",
+    "collaboration"
+   ],
+   "discovered_via": "crossref-journal:European Journal of Work and Organizational Psychology",
+   "matrix_cell": "more_remote-higher_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "higher_effectiveness",
+   "matrix_x_score": 4.5,
+   "matrix_y_score": 2.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "The effectiveness of a team intervention to enhance team regulation in hybrid teams: a randomized controlled trial This article evaluates the effectiveness of a team intervention for hybrid work teams.",
+    "In the intervention, hybrid work teams engaged in team-regulatory strategies with the aim to improve hybrid team collaboration.",
+    "In a cluster-randomized controlled trial, data from 478 individuals across 56 hybrid work teams working with flexible work designs (FWD, flexibility in where, when and how to work) were used to examine the intervention effectiveness on FWD-specific social support, psychological safety, and psychosocial management as an indicator of team collaboration."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "trend: persisted"
+   ],
+   "matrix_y_evidence": [
+    "enhance + effectiveness",
+    "improve + collaboration"
+   ],
+   "evidence_strength": "experimental",
+   "evidence_strength_hits": [
+    "randomized controlled trial"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Casual yet Crucial: How informal nonwork-related communication shapes transformational leadership in hybrid work environments",
+   "authors": "Dorothee Lütjens, Jörg Felfe",
+   "source": "European Journal of Work and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-09-16",
+   "link": "https://doi.org/10.1080/1359432x.2025.2560496",
+   "type": "peer-reviewed article",
+   "abstract": "Based on social information processing theory, this study investigates the role of informal leader-follower communication for transformational leadership (TFL) and job satisfaction across different work settings. Using both a daily diary study and an experimental vignette study, we found that informal interactions are significantly associated with perceptions of TFL and partially moderate the relationship between TFL and job satisfaction. However, such informal exchanges decline on remote workdays, potentially undermining leadership effectiveness in hybrid and fully remote contexts. Based on these insights, we recommend that leaders proactively foster both trivial and meaningful informal communication with their followers on remote workdays, and that organizations establish norms and occasions that support casual, nonwork-related exchanges among employees.",
+   "work_evidence": [
+    "work",
+    "employees",
+    "job"
+   ],
+   "location_evidence": [
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "effectiveness",
+    "job satisfaction"
+   ],
+   "discovered_via": "crossref-journal:European Journal of Work and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 1.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Casual yet Crucial: How informal nonwork-related communication shapes transformational leadership in hybrid work environments Based on social information processing theory, this study investigates the role of informal leader-follower communication for transformational leadership (TFL) and job satisfaction across different work settings."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Support for a legal right to work from home: Do those who need it, support it? The COVID‐19 pandemic as natural experiment",
+   "authors": "Maximiliane Reifenscheid, Katja Möhring",
+   "source": "Journal of Occupational and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-09-01",
+   "link": "https://doi.org/10.1111/joop.70046",
+   "type": "peer-reviewed article",
+   "abstract": "Abstract Germany's work culture, historically shaped by strong male breadwinner and ideal worker norms, has gradually shifted toward more flexible working arrangements. Before the COVID‐19 pandemic, access to working from home was highly restricted. Despite its expansion during the pandemic, significant inequalities in access persist. This study examines the evolution of public support for a legal right to work from home in Germany over the course of the pandemic as a ‘natural homeworking experiment’. Drawing on normative policy feedback theory, we hypothesize that support initially increased among groups with lower bargaining power before diffusing to the broader population. We use longitudinal data from 2705 individuals (8368 person‐years) surveyed four times between January 2020 and January 2022. Findings confirm that public support for such regulation increased over the first 2 years of the pandemic, with temporary stagnation in fall 2021 but stronger growth towards the end of containment measures. At that stage, support also grew among groups initially less supportive of the law. Notably, support was not limited to those working from home and followed clear socio‐economic patterns: women, young individuals, and low earners consistently expressed higher approval. These results underscore the necessity of legislation guaranteeing access to work from home.",
+   "work_evidence": [
+    "work",
+    "worker"
+   ],
+   "location_evidence": [
+    "work from home",
+    "working from home",
+    "flexible working"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Journal of Occupational and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 9.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "These results underscore the necessity of legislation guaranteeing access to work from home."
+   ],
+   "matrix_x_evidence": [
+    "flexible working",
+    "work from home",
+    "working from home"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "quasi_experimental",
+   "evidence_strength_hits": [
+    "natural experiment"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "How Much Do We Trust Remote Managers? Examining Follower Trust, Construal, and Performance",
+   "authors": "Timothy D. Golden, Michael T. Ford",
+   "source": "Personnel Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-06-01",
+   "link": "https://doi.org/10.1111/peps.12671",
+   "type": "peer-reviewed article",
+   "abstract": "ABSTRACT With the widespread shift to remote and hybrid work, followers of leaders who telework are more distant from their leaders and may develop different judgments of their leader's trustworthiness. Drawing upon construal level theory (CLT), we investigate the effect of a leader's teleworking on trust followers have in their leader and suggest that higher level construals associated with the leader's distance help explain this effect. Moreover, we investigate the moderating role of a leader's monitoring behavior. Study 1, a longitudinal field study using matched data from 314 followers, 108 leaders, and 218 projects in a large corporation, finds leader teleworking is negatively associated with follower affect‐based trust, which in turn is associated with project financial performance. Study 2, a 3‐wave study of employed adults ( n = 262), finds evidence that follower construal mediates the relationship between the extent of leader teleworking and follower trust. Study 3, a daily study of employed adults ( n = 98) conducted over 10 consecutive workdays, finds support for these effects at a daily and between‐person level. Across the three studies, results indicate the extent of leader teleworking is negatively associated with follower trust in the leader through higher level follower construal, with leader monitoring exacerbating this effect.",
+   "work_evidence": [
+    "work",
+    "managers"
+   ],
+   "location_evidence": [
+    "telework",
+    "teleworking",
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "performance"
+   ],
+   "discovered_via": "crossref-journal:Personnel Psychology",
+   "matrix_cell": "more_remote-lower_effectiveness",
+   "matrix_x": "more_remote",
+   "matrix_y": "lower_effectiveness",
+   "matrix_x_score": 7.5,
+   "matrix_y_score": -2.0,
+   "matrix_unplaced_reason": "",
+   "matrix_evidence_sentences": [
+    "Examining Follower Trust, Construal, and Performance ABSTRACT With the widespread shift to remote and hybrid work, followers of leaders who telework are more distant from their leaders and may develop different judgments of their leader's trustworthiness.",
+    "Study 1, a longitudinal field study using matched data from 314 followers, 108 leaders, and 218 projects in a large corporation, finds leader teleworking is negatively associated with follower affect‐based trust, which in turn is associated with project financial performance.",
+    "Across the three studies, results indicate the extent of leader teleworking is negatively associated with follower trust in the leader through higher level follower construal, with leader monitoring exacerbating this effect."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "telework",
+    "teleworking",
+    "trend: shift to"
+   ],
+   "matrix_y_evidence": [
+    "negatively + results",
+    "negatively associated + results"
+   ],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "longitudinal"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "‘Distant but close’: Leadership behaviours, psychological distance, employee coping and effectiveness in remote work contexts",
+   "authors": "Anders Friis Marstand, Olga Epitropaki, Ilias Kapoutsis",
+   "source": "Journal of Occupational and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-03-01",
+   "link": "https://doi.org/10.1111/joop.12544",
+   "type": "peer-reviewed article",
+   "abstract": "Abstract Drawing on construal level and conservation of resources theories, our paper focuses on the psychological distance employees experience from their manager in remote work contexts. We specifically examine the role of three leadership behaviours (initiating structure, consideration and vision communication) on employees' perceptions of psychological distance from their manager and the subsequent effects on employee task, emotion and avoidance coping and individual effectiveness outcomes. Using data from two independent studies (Study 1: a four‐wave time‐lagged online study of remotely working 338 participants; Study 2: a four‐wave time‐lagged study of 202 hybrid working professionals), we found that consideration and vision communication reduced employees' perceptions of psychological distance from their manager, while psychological distance decreased task coping. Support for a serial mediation model was also found, with consideration and vision communication indirectly influencing task performance and consideration indirectly influencing organizational citizenship behaviours and withdrawal behaviours via psychological distance and then via task coping. Our research results provide new insights into the role of leadership in remote work contexts and highlight the implications of psychological distance from the leader for employees' coping responses and individual effectiveness.",
+   "work_evidence": [
+    "work",
+    "employee",
+    "employees",
+    "manager"
+   ],
+   "location_evidence": [
+    "remote work",
+    "hybrid working"
+   ],
+   "effect_evidence": [
+    "performance",
+    "effectiveness"
+   ],
+   "discovered_via": "crossref-journal:Journal of Occupational and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 4.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "‘Distant but close’: Leadership behaviours, psychological distance, employee coping and effectiveness in remote work contexts Abstract Drawing on construal level and conservation of resources theories, our paper focuses on the psychological distance employees experience from their manager in remote work contexts.",
+    "Our research results provide new insights into the role of leadership in remote work contexts and highlight the implications of psychological distance from the leader for employees' coping responses and individual effectiveness."
+   ],
+   "matrix_x_evidence": [
+    "hybrid working",
+    "remote work",
+    "remotely"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Working from Home, COVID-19, and Job Satisfaction",
+   "authors": "Inga Laß, Esperanza Vera-Toscano, Mark Wooden",
+   "source": "ILR Review",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-03-01",
+   "link": "https://doi.org/10.1177/00197939241301704",
+   "type": "peer-reviewed article",
+   "abstract": "This article examines the impact of the growth in the incidence of working from home during the COVID-19 pandemic on workers’ job satisfaction. Using longitudinal data collected in 2019 and 2021 as part of the Household, Income and Labour Dynamics in Australia (HILDA) Survey, fixed-effects models of job satisfaction are estimated. Changes in the share of total weekly work hours usually worked from home are not found to have any significant association with changes in job satisfaction for men. By contrast, a strong significant positive (but nonlinear) association is found for women, and this relationship is concentrated on women with children. These findings suggest the main benefit of working from home for workers arises from the improved ability to combine work and family responsibilities, something that matters more to women given they continue to shoulder most of the responsibility for house and care work.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "job",
+    "labour"
+   ],
+   "location_evidence": [
+    "working from home"
+   ],
+   "effect_evidence": [
+    "job satisfaction"
+   ],
+   "discovered_via": "crossref-journal:ILR Review",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 2.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Working from Home, COVID-19, and Job Satisfaction This article examines the impact of the growth in the incidence of working from home during the COVID-19 pandemic on workers’ job satisfaction."
+   ],
+   "matrix_x_evidence": [
+    "working from home"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "survey",
+    "longitudinal"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Location Matters: Everyday Gender Discrimination in Remote and On-site Work",
+   "authors": "Laura Doering, András Tilcsik",
+   "source": "Organization Science",
+   "source_tier": "Tier 1",
+   "source_kind": "scholarly",
+   "date": "2025-03-01",
+   "link": "https://doi.org/10.1287/orsc.2022.16949",
+   "type": "peer-reviewed article",
+   "abstract": "Remote work has dramatically transformed professional environments, sparking considerable scholarly interest in its impact on employees and organizations. Contributing to this burgeoning literature, we investigate how remote versus on-site work affects women’s experiences of gender discrimination. Given that work location can alter the gendered nature of interactions, we focus on everyday gender discrimination: slights and offenses that occur in interactions and are perceived by recipients as reflecting gender bias. Integrating gender frame theory and scholarship on virtual work, we argue that the gender frame tends to be less salient in remote settings. Thus, we predict that women experience less everyday gender discrimination when working remotely than on-site. Moreover, because the gender frame is likely to be more salient during on-site work for younger women and those who work with mostly men, we expect that these women experience a particularly pronounced reduction in everyday gender discrimination when working remotely. To test these predictions, we developed a new measure of everyday gender discrimination and conducted an original survey of 1,091 professional women who work in the same job both remotely and on-site. We find that women consistently report less everyday gender discrimination in remote versus on-site work. This effect is particularly pronounced for younger women and those who interact mainly with men. Overall, this study advances research on how work location shapes workers’ outcomes and experiences, enriches the literature on the trade-offs women face in virtual and on-site settings, and extends scholarship on the contextual factors shaping workplace discrimination. Funding: This work was supported by Social Sciences and Humanities Research Council of Canada [Grant 435-2020-0059], the Canada Research Chairs Program, and the Institute for Pandemics and the Institute for Gender and the Economy at the University of Toronto. Supplemental Material: The online appendix is available at https://doi.org/10.1287/orsc.2022.16949 .",
+   "work_evidence": [
+    "work",
+    "workers",
+    "workplace",
+    "employees",
+    "job"
+   ],
+   "location_evidence": [
+    "remote work",
+    "on site work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Organization Science",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": -10.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "Overall, this study advances research on how work location shapes workers’ outcomes and experiences, enriches the literature on the trade-offs women face in virtual and on-site settings, and extends scholarship on the contextual factors shaping workplace discrimination."
+   ],
+   "matrix_x_evidence": [
+    "on site",
+    "remote work",
+    "remotely"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "observational",
+   "evidence_strength_hits": [
+    "survey"
+   ],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "What goes around comes around - work characteristics as both antecedents and outcomes of hybrid work adoption",
+   "authors": "Lisa Handke, Thomas A. O’Neill, Matthew J.W. McLarnon, Simone Kauffeld",
+   "source": "European Journal of Work and Organizational Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2025-01-02",
+   "link": "https://doi.org/10.1080/1359432x.2024.2441884",
+   "type": "peer-reviewed article",
+   "abstract": "The effectiveness of hybrid work (a combination of telework and office-based work) has been theorized to operate through improvements in employees’ control over their workflow and work environment. However, current knowledge is largely based on static research designs and does not adequately consider the circumstances that drive employees’ actual adoption of hybrid work. In this study, we propose that adopting hybrid work improves four work characteristics tied to employees’ control over their workflow and work environment, namely autonomy, demanding environmental conditions (e.g. noise), workflow interruptions, and time pressure. At the same time, we also propose that employees’ actual hybrid work adoption depends on these same four work characteristics to begin with. Using a quasi-experimental study, we employ latent change score modelling to analyse how autonomy, demanding environmental conditions, workflow interruptions and time pressure influence, and are influenced by, hybrid work adoption, based on a sample of 699 white-collar workers. Results show that whereas autonomy and workflow interruptions drive hybrid work adoption, demanding environmental conditions and workflow interruptions change as a result of it. This suggests that organizational hybrid work policies can largely improve job demands, but that only a select group of employees adopt hybrid work.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "employees",
+    "job"
+   ],
+   "location_evidence": [
+    "telework",
+    "hybrid work"
+   ],
+   "effect_evidence": [
+    "effectiveness"
+   ],
+   "discovered_via": "crossref-journal:European Journal of Work and Organizational Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 7.5,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "What goes around comes around - work characteristics as both antecedents and outcomes of hybrid work adoption The effectiveness of hybrid work (a combination of telework and office-based work) has been theorized to operate through improvements in employees’ control over their workflow and work environment.",
+    "In this study, we propose that adopting hybrid work improves four work characteristics tied to employees’ control over their workflow and work environment, namely autonomy, demanding environmental conditions (e.g. noise), workflow interruptions, and time pressure.",
+    "Using a quasi-experimental study, we employ latent change score modelling to analyse how autonomy, demanding environmental conditions, workflow interruptions and time pressure influence, and are influenced by, hybrid work adoption, based on a sample of 699 white-collar workers."
+   ],
+   "matrix_x_evidence": [
+    "hybrid work",
+    "office based",
+    "telework",
+    "trend: adoption of"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Location-Specificity and Relocation Incentive Programs for Remote Workers",
+   "authors": "Thomaz Teodorovicz, Prithwiraj (Raj) Choudhury, Evan Starr",
+   "source": "Organization Science",
+   "source_tier": "Tier 1",
+   "source_kind": "scholarly",
+   "date": "2025-01-01",
+   "link": "https://doi.org/10.1287/orsc.2023.17712",
+   "type": "peer-reviewed article",
+   "abstract": "The precipitous growth of remote work has given rise to a new phenomenon: the emergence of relocation incentive programs that localities use to compete for the physical presence of remote workers. Remote workers with high general human capital may create value for their new destinations and reverse net talent outflow from smaller cities in middle America and globally. However, localities seeking to attract, retain, and create value from remote workers face significant challenges because such workers may have a low attachment to their new destination. Analogizing these challenges to the problem of creating and capturing value from workers with general human capital, we argue that localities can benefit from using relocation incentive program by leveraging location-specific attributes that create value for the individual and the locality. We examined these ideas in the context of Tulsa Remote, a program that provides relocation incentives and a bundle of services to increase engagement and embeddedness in Tulsa, Oklahoma. We found that Tulsa Remote increased community engagement, real income, and entrepreneurship of remote workers, benefiting both the community and the individual. Tulsa Remote increased the worker’s willingness to stay, and local community engagement is a key driver of this relationship. This work thus suggests that location specificity enables localities to both create and capture value from remote workers. Supplemental Material: The online appendix is available at https://doi.org/10.1287/orsc.2023.17712 .",
+   "work_evidence": [
+    "work",
+    "worker",
+    "workers"
+   ],
+   "location_evidence": [
+    "remote work"
+   ],
+   "effect_evidence": [
+    "engagement"
+   ],
+   "discovered_via": "crossref-journal:Organization Science",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 2.5,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "remote work",
+    "trend: growth of"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "The Flexibility Paradox: Why Flexible Working Leads to (Self‐)Exploitation By HeejungChung, Bristol: Policy Press. 2022, ISBN: 978‐1447354789, Price GBP 26.99.",
+   "authors": "Clelia Li Vigni",
+   "source": "British Journal of Industrial Relations",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2024-12-01",
+   "link": "https://doi.org/10.1111/bjir.12808",
+   "type": "peer-reviewed article",
+   "abstract": "The Flexibility Paradox: Why Flexible Working Leads to (Self-)Exploitation by Heejung Chung is, at its core, a book about time and space, autonomy and control.It is a well-written and accessible, data-rich contribution that reflects upon the transformation of work and working experiences.It does so by focusing on flexible working, a concept taken to signify a multitude of changes in the political and social regulation of work as well as in its centrality and role in people's lives, used as a lens through which to analyse the contemporary state of work.These changes include the possibility to alter three fundamental variables in workers' lives: when they work (shifting around starting and ending times or having full control over one's schedule altogether); where they carry out their working activities (such as at home or in other spaces outside the office or work premises); and how much they work-the most common example is part-time work, but it may include several other arrangements.The book tackles a timely topic, which in light of the Covid-19 pandemic has received not only close review by researchers, but it has also frequently featured in the media and the public sphere.As Chung recalls, the lockdowns enforced by governments in order to foster social distancing and limit the spread of the pandemic led firms and public administrations to systematically introduce working-from-home arrangements.Crucially, she argues that while the data show a stall in the increase in flexible working since 2000, Covid-19 marked a new upsurge in its implementation.This in turn suggests that the arrangements introduced during the emergency were sometimes left in place-at least partially-even after the end of lockdowns, making this topic particularly significant in the current debate on work.The author makes it clear from the outset that she supports flexible working: anything that affords workers more control and autonomy over their (working) lives should be seen as a welcome development.However, under the existing socioeconomic system and capital-labour power relations, flexible working is shown to consistently exacerbate negative trends such as workers' (self-)exploitation and the gendered division of labour.This is exactly the 'flexibility paradox' that Chung illustrates: what in theory could allow greater freedom and autonomy to workers-namely, 732",
+   "work_evidence": [
+    "work",
+    "workers",
+    "labour",
+    "firms"
+   ],
+   "location_evidence": [
+    "working from home",
+    "flexible working"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:British Journal of Industrial Relations",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 6.0,
+   "matrix_y_score": -0.5,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "The Flexibility Paradox: Why Flexible Working Leads to (Self-)Exploitation by Heejung Chung is, at its core, a book about time and space, autonomy and control.It is a well-written and accessible, data-rich contribution that reflects upon the transformation of work and working experiences.It does so by focusing on flexible working, a concept taken to signify a multitude of changes in the political and social regulation of work as well as in its centrality and role in people's lives, used as a lens through which to analyse the contemporary state of work.These changes include the possibility to alter three fundamental variables in workers' lives: when they work (shifting around starting and ending times or having full control over one's schedule altogether); where they carry out their working activities (such as at home or in other spaces outside the office or work premises); and how much they work-the most common example is part-time work, but it may include several other arrangements.The book tackles a timely topic, which in light of the Covid-19 pandemic has received not only close review by researchers, but it has also frequently featured in the media and the public sphere.As Chung recalls, the lockdowns enforced by governments in order to foster social distancing and limit the spread of the pandemic led firms and public administrations to systematically introduce working-from-home arrangements.Crucially, she argues that while the data show a stall in the increase in flexible working since 2000, Covid-19 marked a new upsurge in its implementation.This in turn suggests that the arrangements introduced during the emergency were sometimes left in place-at least partially-even after the end of lockdowns, making this topic particularly significant in the current debate on work.The author makes it clear from the outset that she supports flexible working: anything that affords workers more control and autonomy over their (working) lives should be seen as a welcome development.However, under the existing socioeconomic system and capital-labour power relations, flexible working is shown to consistently exacerbate negative trends such as workers' (self-)exploitation and the gendered division of labour.This is exactly the 'flexibility paradox' that Chung illustrates: what in theory could allow greater freedom and autonomy to workers-namely, 732"
+   ],
+   "matrix_x_evidence": [
+    "flexible working",
+    "trend: increase in",
+    "trend: spread of",
+    "working from home"
+   ],
+   "matrix_y_evidence": [
+    "greater + autonomy",
+    "paradox",
+    "self exploitation"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "A dual pathway model of remote work intensity: A meta‐analysis of its simultaneous positive and negative effects",
+   "authors": "Ravi S. Gajendran, Ajay R. Ponnapalli, Chen Wang, Anoop A. Javalagi",
+   "source": "Personnel Psychology",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2024-12-01",
+   "link": "https://doi.org/10.1111/peps.12641",
+   "type": "peer-reviewed article",
+   "abstract": "Abstract As the COVID‐19 pandemic wanes, many organizations are asking employees to return to the office concerned that more extensive remote work could hurt employee morale and productivity. Employees, however, prefer to work remotely because of the flexibility it provides. In light of such competing perspectives, we conducted a meta‐analysis examining remote work intensity's (RWI) effects on employee outcomes. RWI refers to the extensiveness of remote work ranging from one or two days a week to full‐time remote work. We propose a dual pathway model linking RWI to employee outcomes arguing that it has indirect but opposing effects on the same outcomes via two mediators—perceived autonomy and isolation. Findings from a meta‐analysis of RWI's effects based on 108 studies ( k = 110, N = 45,288) support the dual pathway model. Allaying organizational concerns about remote work, RWI had overall small but beneficial effects on multiple consequential employee outcomes including job satisfaction, organizational commitment, perceived organizational support, supervisor‐rated performance, and turnover intentions. We also conducted a meta‐analysis of the effects of remote work use (RWU), a binary construct taking on two values—remote workers (users) versus office‐based workers (non‐users of remote work). Findings from the RWU meta‐analysis based on 62 studies ( k = 63, N = 41,904) suggest that remote workers generally have better outcomes than their office‐based colleagues. Altogether, findings suggest that remote work offers modest upsides with limited downsides—even for those who spend more time working away from the office.",
+   "work_evidence": [
+    "work",
+    "workers",
+    "employee",
+    "employees",
+    "job"
+   ],
+   "location_evidence": [
+    "remote work"
+   ],
+   "effect_evidence": [
+    "productivity",
+    "performance",
+    "turnover",
+    "job satisfaction"
+   ],
+   "discovered_via": "crossref-journal:Personnel Psychology",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 3.0,
+   "matrix_y_score": 0.5,
+   "matrix_unplaced_reason": "no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [
+    "A dual pathway model of remote work intensity: A meta‐analysis of its simultaneous positive and negative effects Abstract As the COVID‐19 pandemic wanes, many organizations are asking employees to return to the office concerned that more extensive remote work could hurt employee morale and productivity.",
+    "In light of such competing perspectives, we conducted a meta‐analysis examining remote work intensity's (RWI) effects on employee outcomes.",
+    "Allaying organizational concerns about remote work, RWI had overall small but beneficial effects on multiple consequential employee outcomes including job satisfaction, organizational commitment, perceived organizational support, supervisor‐rated performance, and turnover intentions."
+   ],
+   "matrix_x_evidence": [
+    "office based",
+    "remote work",
+    "remotely"
+   ],
+   "matrix_y_evidence": [
+    "better + outcomes",
+    "hurt + productivity"
+   ],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  },
+  {
+   "title": "Working from everywhere: The future of work and inclusive organizational behavior (IOB)",
+   "authors": "Andri Georgiadou, Mustafa Özbilgin, Banu Özkazanç‐Pan",
+   "source": "Journal of Organizational Behavior",
+   "source_tier": "Tier 2",
+   "source_kind": "scholarly",
+   "date": "2024-11-01",
+   "link": "https://doi.org/10.1002/job.2840",
+   "type": "peer-reviewed article",
+   "abstract": "Summary The rapid digitalization of work, accelerated by the COVID‐19 pandemic, has fundamentally transformed organizational behavior and necessitated a reconceptualization of inclusion in virtual spaces. This editorial synthesizes six groundbreaking studies that advance our understanding of inclusive organizational behavior (IOB) in digital contexts. Drawing on these contributions, we propose a novel, multilevel framework for digital IOB that integrates individual, group, and organizational factors shaping inclusive experiences in virtual and hybrid work arrangements. Key themes emerging from the studies include (1) reconceptualizing inclusion for digital contexts, (2) multilevel dynamics of digital inclusion, and (3) technology as both enabler and barrier to inclusion. Our framework conceptualizes digital IOB as arising from complex interactions between individual, group, and organizational factors, mediated and moderated by technological infrastructures and practices. We discuss theoretical and practical implications, highlighting the need for holistic, systemic approaches to fostering digital inclusion and outlining promising avenues for future research in this critical area.",
+   "work_evidence": [
+    "work"
+   ],
+   "location_evidence": [
+    "hybrid work"
+   ],
+   "effect_evidence": [],
+   "discovered_via": "crossref-journal:Journal of Organizational Behavior",
+   "matrix_cell": "",
+   "matrix_x": "",
+   "matrix_y": "",
+   "matrix_x_score": 1.0,
+   "matrix_y_score": 0.0,
+   "matrix_unplaced_reason": "no sentence ties a working arrangement to an outcome; no clear direction on the effectiveness axis",
+   "matrix_evidence_sentences": [],
+   "matrix_x_evidence": [
+    "hybrid work"
+   ],
+   "matrix_y_evidence": [],
+   "evidence_strength": "unspecified",
+   "evidence_strength_hits": [],
+   "first_seen": "2026-09-02T16:43Z",
+   "new_this_scan": false,
+   "placement_source": "classifier",
+   "curator_note": ""
+  }
+ ]
+}
